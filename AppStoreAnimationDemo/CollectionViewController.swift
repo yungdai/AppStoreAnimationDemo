@@ -13,9 +13,9 @@ class CollectionViewController: UICollectionViewController {
 	
 	var isOpen = false
 	
-	var cellBounds = [IndexPath: CGRect]()
+	var cellBounds = CGRect.zero
 
-	var cellCenter = [IndexPath: CGPoint]()
+	var cellCenter = CGPoint.zero
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,20 +51,26 @@ class CollectionViewController: UICollectionViewController {
 
 		if !isOpen {
 
-			// save the previous bounds, might come in handy if you are going to open up a bunch of different cells at once
-			cellBounds = [indexPath: currentCell.bounds]
-			cellCenter = [indexPath: currentCell.center]
+			cellBounds = currentCell.bounds
+			cellCenter = currentCell.center
 
-			let collectionViewCenter = collectionView.center
-			
 			UIView.animate(withDuration: 0.75, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.7, options: .curveEaseInOut, animations: {
-				currentCell.bounds = collectionView.bounds
-				currentCell.center = CGPoint(x: collectionViewCenter.x, y: collectionViewCenter.y)
 
+				// fixes the offset when you first start because you will have an offset -0 for y
+				if collectionView.contentOffset.y < 0 {
+					collectionView.contentOffset.y = 0
+				}
+				
+				currentCell.bounds = collectionView.bounds
+				currentCell.center = self.getCurrentCenterPoint()
+
+
+				// ensures no cells below that will overlap this cell.
 				collectionView.bringSubviewToFront(currentCell)
 
 				// disable scrolling so you can't move the cell
 				collectionView.isScrollEnabled = false
+				
 			}, completion: nil)
 
 			isOpen.toggle()
@@ -72,8 +78,8 @@ class CollectionViewController: UICollectionViewController {
 
 			UIView.animate(withDuration: 0.75, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.7, options: .curveEaseInOut, animations: {
 
-				currentCell.bounds = self.cellBounds[indexPath] ?? CGRect.zero
-				currentCell.center = self.cellCenter[indexPath] ?? CGPoint.zero
+				currentCell.bounds = self.cellBounds
+				currentCell.center = self.cellCenter
 				
 				// renable scrolling for the collectionView
 				collectionView.isScrollEnabled = true
@@ -81,6 +87,40 @@ class CollectionViewController: UICollectionViewController {
 
 			isOpen.toggle()
 		}
+	}
+	
+	private func getCurrentCenterPoint() -> CGPoint {
+
+		let collectionViewCenter = collectionView.center
+		let currentY = collectionViewCenter.y + collectionView.contentOffset.y
+		let currentCenter = CGPoint(x: collectionViewCenter.x, y: getYOffset(currentCenterY: currentY))
+		
+		
+//		let currentCenter = CGPoint(x: collectionViewCenter.x, y:currentY)
+		
+		print(collectionView.contentOffset.y)
+		
+		return currentCenter
+	}
+	
+	private func getYOffset(currentCenterY: CGFloat) -> CGFloat {
+
+		let maxY = -collectionView.contentInset.top + collectionView.contentSize.height - collectionView.frame.height
+
+		// if the top is a negative the value should be 0
+
+		// TODO: must get calculated value for the maximum
+		let offset = returnNumberBetween(minimum: 0, maximum: 642, inputValue: currentCenterY)
+		// if at the bottom it should be the offsetY value - 34 (on an iPhoneXS Max) need to figure out that value
+		
+		return offset
+	}
+	
+	func returnNumberBetween(minimum smallerNumber: CGFloat, maximum largerNumber: CGFloat, inputValue value: CGFloat) -> CGFloat {
+		
+		let returnedFloat = CGFloat.minimum(largerNumber, CGFloat.maximum(smallerNumber, value))
+		
+		return returnedFloat
 	}
 }
 
