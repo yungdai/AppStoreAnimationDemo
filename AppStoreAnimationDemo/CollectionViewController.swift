@@ -95,9 +95,6 @@ class CollectionViewController: UICollectionViewController {
 		let currentY = collectionViewCenter.y + collectionView.contentOffset.y
 		let currentCenter = CGPoint(x: collectionViewCenter.x, y: getYOffset(currentCenterY: currentY))
 		
-		
-//		let currentCenter = CGPoint(x: collectionViewCenter.x, y:currentY)
-		
 		print(collectionView.contentOffset.y)
 		
 		return currentCenter
@@ -105,17 +102,15 @@ class CollectionViewController: UICollectionViewController {
 	
 	private func getYOffset(currentCenterY: CGFloat) -> CGFloat {
 
-		let maxY = -collectionView.contentInset.top + collectionView.contentSize.height - collectionView.frame.height
-
-		// if the top is a negative the value should be 0
-
-		// TODO: must get calculated value for the maximum
-		let offset = returnNumberBetween(minimum: 0, maximum: 642, inputValue: currentCenterY)
-		// if at the bottom it should be the offsetY value - 34 (on an iPhoneXS Max) need to figure out that value
+		// the maxY offset would be the contentSizeHeight, but at the middle of the collectView.frame.height
+		let maxY = collectionView.contentSize.height - (collectionView.frame.height / 2)
+		
+		let offset = returnNumberBetween(minimum: 0, maximum: maxY, inputValue: currentCenterY)
 		
 		return offset
 	}
 	
+	// handy helper that can be set an a CGFloat extension to make sure you get guidance for values between two numbers.
 	func returnNumberBetween(minimum smallerNumber: CGFloat, maximum largerNumber: CGFloat, inputValue value: CGFloat) -> CGFloat {
 		
 		let returnedFloat = CGFloat.minimum(largerNumber, CGFloat.maximum(smallerNumber, value))
