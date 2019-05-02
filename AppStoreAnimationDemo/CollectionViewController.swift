@@ -15,6 +15,7 @@ class CollectionViewController: UICollectionViewController {
 	
 	var cellBounds = [IndexPath: CGRect]()
 
+	var cellCenter = [IndexPath: CGPoint]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,35 +51,37 @@ class CollectionViewController: UICollectionViewController {
 
 		if !isOpen {
 
+			// save the previous bounds, might come in handy if you are going to open up a bunch of different cells at once
 			cellBounds = [indexPath: currentCell.bounds]
-			
-			// might need this later
-			//			let convertedBounds = currentCell.convert(currentCell.bounds, from: collectionView)
+			cellCenter = [indexPath: currentCell.center]
 
-			UIView.animate(withDuration: 0.75, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.6, options: .curveEaseInOut, animations: {
+			let collectionViewCenter = collectionView.center
+			
+			UIView.animate(withDuration: 0.75, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.7, options: .curveEaseInOut, animations: {
 				currentCell.bounds = collectionView.bounds
+				currentCell.center = CGPoint(x: collectionViewCenter.x, y: collectionViewCenter.y)
+
 				collectionView.bringSubviewToFront(currentCell)
-				
-				currentCell.layoutIfNeeded()
-				currentCell.layoutSubviews()
+
+				// disable scrolling so you can't move the cell
+				collectionView.isScrollEnabled = false
 			}, completion: nil)
 
 			isOpen.toggle()
 		} else {
 
-			UIView.animate(withDuration: 0.75, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.6, options: .curveEaseInOut, animations: {
+			UIView.animate(withDuration: 0.75, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.7, options: .curveEaseInOut, animations: {
 
 				currentCell.bounds = self.cellBounds[indexPath] ?? CGRect.zero
-				currentCell.layoutIfNeeded()
-				currentCell.layoutSubviews()
-
+				currentCell.center = self.cellCenter[indexPath] ?? CGPoint.zero
+				
+				// renable scrolling for the collectionView
+				collectionView.isScrollEnabled = true
 			})
 
 			isOpen.toggle()
 		}
-		
 	}
-
 }
 
 extension CollectionViewController: UICollectionViewDelegateFlowLayout {
