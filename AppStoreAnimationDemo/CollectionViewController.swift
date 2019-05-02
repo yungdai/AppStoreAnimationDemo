@@ -24,16 +24,6 @@ class CollectionViewController: UICollectionViewController {
         // Do any additional setup after loading the view.
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -61,11 +51,11 @@ class CollectionViewController: UICollectionViewController {
 		if !isOpen {
 
 			cellBounds = [indexPath: currentCell.bounds]
-//			let convertedBounds = currentCell.convert(currentCell.bounds, from: collectionView)
+			
+			// might need this later
+			//			let convertedBounds = currentCell.convert(currentCell.bounds, from: collectionView)
 
-//			currentCell.bounds = convertedBounds
-
-			UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.6, options: .curveEaseInOut, animations: {
+			UIView.animate(withDuration: 0.75, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.6, options: .curveEaseInOut, animations: {
 				currentCell.bounds = collectionView.bounds
 				collectionView.bringSubviewToFront(currentCell)
 				
@@ -73,20 +63,10 @@ class CollectionViewController: UICollectionViewController {
 				currentCell.layoutSubviews()
 			}, completion: nil)
 
-//			UIView.animate(withDuration: 0.3) {
-//
-//
-//				currentCell.bounds = collectionView.bounds
-//
-//				currentCell.layoutIfNeeded()
-//				currentCell.layoutSubviews()
-//
-//			}
-
 			isOpen.toggle()
 		} else {
 
-			UIView.animate(withDuration: 0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.6, options: .curveEaseInOut, animations: {
+			UIView.animate(withDuration: 0.75, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.6, options: .curveEaseInOut, animations: {
 
 				currentCell.bounds = self.cellBounds[indexPath] ?? CGRect.zero
 				currentCell.layoutIfNeeded()
@@ -98,41 +78,6 @@ class CollectionViewController: UICollectionViewController {
 		}
 		
 	}
-	
-	
-	
-	
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
 
 }
 
