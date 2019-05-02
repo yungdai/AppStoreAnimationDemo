@@ -14,6 +14,9 @@ class CollectionViewController: UICollectionViewController {
 	var isOpen = false
 	
 	var cellBounds = CGRect.zero
+	
+	var springDamping: CGFloat = 0.8
+	var springVelocity: CGFloat = 0.9
 
 	var cellCenter = CGPoint.zero
     override func viewDidLoad() {
@@ -54,7 +57,7 @@ class CollectionViewController: UICollectionViewController {
 			cellBounds = currentCell.bounds
 			cellCenter = currentCell.center
 
-			UIView.animate(withDuration: 0.75, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.7, options: .curveEaseInOut, animations: {
+			UIView.animate(withDuration: 1, delay: 0.0, usingSpringWithDamping: springDamping, initialSpringVelocity: springVelocity, options: .curveEaseInOut, animations: {
 
 				// fixes the offset when you first start because you will have an offset -0 for y
 				if collectionView.contentOffset.y < 0 {
@@ -76,7 +79,7 @@ class CollectionViewController: UICollectionViewController {
 			isOpen.toggle()
 		} else {
 
-			UIView.animate(withDuration: 0.75, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 0.7, options: .curveEaseInOut, animations: {
+			UIView.animate(withDuration: 1, delay: 0.0, usingSpringWithDamping: springDamping, initialSpringVelocity: springVelocity, options: .curveEaseInOut, animations: {
 
 				currentCell.bounds = self.cellBounds
 				currentCell.center = self.cellCenter

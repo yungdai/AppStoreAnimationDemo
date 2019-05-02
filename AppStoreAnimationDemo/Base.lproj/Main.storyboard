@@ -37,9 +37,9 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cellBackground" translatesAutoresizingMaskIntoConstraints="NO" id="BAC-6d-DpK">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heading Label with Text" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkA-JX-csK">
-                                                    <rect key="frame" x="20" y="69" width="105.5" height="11"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tree in an island in the middle of a lake" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VkA-JX-csK">
+                                                    <rect key="frame" x="20" y="63" width="335" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -53,7 +53,7 @@
                                                 <constraint firstItem="BAC-6d-DpK" firstAttribute="leading" secondItem="wt6-Gm-z0F" secondAttribute="leading" id="f4X-5U-5hT"/>
                                                 <constraint firstItem="BAC-6d-DpK" firstAttribute="top" secondItem="wt6-Gm-z0F" secondAttribute="top" id="vzX-6r-6aR"/>
                                                 <constraint firstAttribute="bottom" secondItem="BAC-6d-DpK" secondAttribute="bottom" id="wMv-Tb-9Zt"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VkA-JX-csK" secondAttribute="trailing" constant="20" id="ykE-kv-zDY"/>
+                                                <constraint firstAttribute="trailing" secondItem="VkA-JX-csK" secondAttribute="trailing" constant="20" id="ykE-kv-zDY"/>
                                             </constraints>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQf-BQ-4QE">
