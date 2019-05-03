@@ -11,12 +11,13 @@ private let reuseIdentifier = "Cell"
 
 class CollectionViewController: UICollectionViewController {
 	
-	var isOpen = false
-	
 	var cellBounds = CGRect.zero
-	
+	let cellsPerRow: CGFloat = 2
+	let cellHeight: CGFloat = 150
 	var springDamping: CGFloat = 0.8
 	var springVelocity: CGFloat = 0.9
+	
+	var isOpen = false
 
 	var cellCenter = CGPoint.zero
     override func viewDidLoad() {
@@ -27,33 +28,52 @@ class CollectionViewController: UICollectionViewController {
 
         // Do any additional setup after loading the view.
     }
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+
+		// this is to ensure if you leave and come back that if the cell is opened you still won't be able to scroll
+		if isOpen {
+			collectionView.isScrollEnabled = false
+		}
+	}
 
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
         return 30
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? ExpandableCollectionViewCell else {
+			return UICollectionViewCell() }
+		
+		cell.closeButton.alpha = 0
+		cell.closeButton.isHidden = true
+		cell.originalBounds = cell.bounds
+		cell.originalCenter = cell.center
+		cell.springDamping = springDamping
+		cell.springVelocity = springVelocity
+
+		cell.collectionView = collectionView
 
         return cell
     }
-	
+
 	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 		
 		// get the current cell
-		guard let currentCell = collectionView.cellForItem(at: indexPath) else { return }
+		guard let currentCell = collectionView.cellForItem(at: indexPath) as? ExpandableCollectionViewCell else { return }
 
-		if !isOpen {
-
+		if !currentCell.isOpen {
+			
+			isOpen.toggle()
+			currentCell.isOpen.toggle()
 			cellBounds = currentCell.bounds
 			cellCenter = currentCell.center
 
@@ -64,9 +84,16 @@ class CollectionViewController: UICollectionViewController {
 					collectionView.contentOffset.y = 0
 				}
 				
+				currentCell.closeButton.isHidden = false
+				currentCell.closeButton.alpha = 1
+
+				currentCell.headerHeightConstraint.constant = currentCell.headerHeightConstraint.constant * 2
+				
+				// use this because we are changing the height constraint for the image
+				currentCell.layoutIfNeeded()
+				
 				currentCell.bounds = collectionView.bounds
 				currentCell.center = self.getCurrentCenterPoint()
-
 
 				// ensures no cells below that will overlap this cell.
 				collectionView.bringSubviewToFront(currentCell)
@@ -75,19 +102,7 @@ class CollectionViewController: UICollectionViewController {
 				collectionView.isScrollEnabled = false
 				
 			}, completion: nil)
-
-			isOpen.toggle()
 		} else {
-
-			UIView.animate(withDuration: 1, delay: 0.0, usingSpringWithDamping: springDamping, initialSpringVelocity: springVelocity, options: .curveEaseInOut, animations: {
-
-				currentCell.bounds = self.cellBounds
-				currentCell.center = self.cellCenter
-				
-				// renable scrolling for the collectionView
-				collectionView.isScrollEnabled = true
-			})
-
 			isOpen.toggle()
 		}
 	}
@@ -127,8 +142,8 @@ extension CollectionViewController: UICollectionViewDelegateFlowLayout {
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 		
 		let buffer: CGFloat = 10
-		let cellWidth = (UIScreen.main.bounds.width - (buffer * 3)) / 3
+		let cellWidth = (UIScreen.main.bounds.width - (buffer * cellsPerRow)) / cellsPerRow
 		
-		return CGSize(width: cellWidth, height: 100)
+		return CGSize(width: cellWidth, height: cellHeight)
 	}
 }
