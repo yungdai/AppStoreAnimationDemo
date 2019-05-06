@@ -13,6 +13,8 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 	
 	@IBOutlet weak var titleFont: UILabel!
 	@IBOutlet weak var closeButton: UIButton!
+	@IBOutlet weak var bodyText: UILabel!
+	@IBOutlet weak var findOutMoreLabel: UILabel!
 	
 	var isOpen = false
 	
@@ -25,7 +27,10 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 	var springDamping: CGFloat = 0.0
 	var springVelocity: CGFloat = 0.0
 	
+	var animationDuration: TimeInterval = 0.0
+	
 	var previousY: CGFloat = 0.0
+
 	
 	// threshold expressed in percentage of when the snapping should occure
 	var dragThreshold: CGFloat = 0.15
@@ -42,10 +47,14 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 	
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
-		
+
 		setupGesture()
 	}
 	
+	override func awakeFromNib() {
+		bodyText.alpha = 0
+	}
+
 	private func setupGesture() {
 
 		self.addGestureRecognizer(panGesture)
@@ -98,6 +107,7 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 			.height - (openedBounds.height * percentageOfHeight)
 		
 		closeButton.alpha = 1 - percentageOfHeight
+		bodyText.alpha = 1 - percentageOfHeight
 
 		let dragOriginX: CGFloat
 		let dragOriginY: CGFloat
@@ -143,7 +153,7 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 			self.center = self.openedCenter
 			
 			self.closeButton.alpha = 1
-			
+			self.bodyText.alpha = 1
 			self.layoutIfNeeded()
 		})
 	}
@@ -152,7 +162,7 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 		
 		isOpen.toggle()
 		
-		UIView.animate(withDuration: 1, delay: 0.0, usingSpringWithDamping: springDamping, initialSpringVelocity: springVelocity, options: .curveEaseInOut, animations: {
+		UIView.animate(withDuration: animationDuration, delay: 0.0, usingSpringWithDamping: springDamping, initialSpringVelocity: springVelocity, options: .curveEaseInOut, animations: {
 			
 			self.bounds = self.originalBounds
 			self.center = self.originalCenter
@@ -160,10 +170,14 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 			self.closeButton.isHidden = true
 			self.closeButton.alpha = 0
 			
+			self.bodyText.alpha = 0
+			
 			self.collectionView?.isScrollEnabled = true
 			
 			self.headerHeightConstraint.constant = self.headerHeightConstraint.constant / 2
 			
+			
+			self.findOutMoreLabel.animateText(text: "Find out more:", duration: self.animationDuration)
 			// used to layout the new height constraint of the image
 			self.layoutIfNeeded()
 		})

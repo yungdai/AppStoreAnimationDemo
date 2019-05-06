@@ -17,6 +17,8 @@ class CollectionViewController: UICollectionViewController {
 	var springDamping: CGFloat = 0.8
 	var springVelocity: CGFloat = 0.9
 	
+	let animationDuration: TimeInterval = 1
+	
 	var isOpen = false
 
 	var cellCenter = CGPoint.zero
@@ -59,7 +61,7 @@ class CollectionViewController: UICollectionViewController {
 		cell.originalCenter = cell.center
 		cell.springDamping = springDamping
 		cell.springVelocity = springVelocity
-
+		cell.animationDuration = animationDuration
 		cell.collectionView = collectionView
 
         return cell
@@ -78,7 +80,7 @@ class CollectionViewController: UICollectionViewController {
 			cellBounds = currentCell.bounds
 			cellCenter = currentCell.center
 
-			UIView.animate(withDuration: 1, delay: 0.0, usingSpringWithDamping: springDamping, initialSpringVelocity: springVelocity, options: .curveEaseInOut, animations: {
+			UIView.animate(withDuration: TimeInterval(animationDuration), delay: 0.0, usingSpringWithDamping: springDamping, initialSpringVelocity: springVelocity, options: .curveEaseInOut, animations: {
 
 				// fixes the offset when you first start because you will have an offset -0 for y
 				if collectionView.contentOffset.y < 0 {
@@ -88,11 +90,13 @@ class CollectionViewController: UICollectionViewController {
 				currentCell.closeButton.isHidden = false
 				currentCell.closeButton.alpha = 1
 
+				currentCell.bodyText.alpha = 1
 				currentCell.headerHeightConstraint.constant = currentCell.headerHeightConstraint.constant * 2
 				
 				// use this because we are changing the height constraint for the image
 				currentCell.layoutIfNeeded()
 				
+				currentCell.findOutMoreLabel.animateText(text: "New ways to open cells!", duration: self.animationDuration)
 				
 				let currentCenterPoint = self.getCurrentCenterPoint()
 				
@@ -101,7 +105,6 @@ class CollectionViewController: UICollectionViewController {
 				
 				currentCell.center = currentCenterPoint
 				currentCell.openedCenter = currentCenterPoint
-				
 				
 				// ensures no cells below that will overlap this cell.
 				collectionView.bringSubviewToFront(currentCell)
@@ -153,5 +156,19 @@ extension CollectionViewController: UICollectionViewDelegateFlowLayout {
 		let cellWidth = (UIScreen.main.bounds.width - (buffer * cellsPerRow)) / cellsPerRow
 		
 		return CGSize(width: cellWidth, height: cellHeight)
+	}
+}
+
+extension UILabel {
+	
+	func animateText(text: String, duration: TimeInterval) {
+		
+		let animation = CATransition()
+		animation.timingFunction = CAMediaTimingFunction(name: .easeOut)
+		animation.type = .fade
+		animation.duration = duration
+		
+		self.layer.add(animation, forKey: nil)
+		self.text = text
 	}
 }

@@ -102,7 +102,9 @@
                                     <constraint firstAttribute="trailing" secondItem="wt6-Gm-z0F" secondAttribute="trailing" id="wuj-SP-DkM"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="bodyText" destination="gQf-BQ-4QE" id="YIc-20-poA"/>
                                     <outlet property="closeButton" destination="ehx-3f-TpH" id="DBY-wg-liM"/>
+                                    <outlet property="findOutMoreLabel" destination="pKB-pC-V0y" id="bNb-fM-bdU"/>
                                     <outlet property="headerHeightConstraint" destination="FOT-S0-bn5" id="Gh4-iY-rPy"/>
                                     <outlet property="titleFont" destination="VkA-JX-csK" id="cMn-hb-W82"/>
                                 </connections>
