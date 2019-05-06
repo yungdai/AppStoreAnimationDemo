@@ -52,24 +52,18 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 	
 	@objc
 	private func cellGestured() {
-		
+
 		if isOpen {
 
+			let distance = panGesture.translation(in: self).y
+			
 			switch panGesture.state {
 
-			case .began:
-				print("began")
-				
-				print("orginX: \(originalCenter.x)")
-
 			case .changed:
-
-				let distance = panGesture.translation(in: self).y
 
 				if let height = collectionView?.bounds.height {
 					
 					if distance > height * 0.1 {
-
 						revertCell()
 					} else {
 						dragCell(panDistance: distance, collectionViewHeight: height)
@@ -79,9 +73,7 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 			case .ended:
 				
 				if let height = collectionView?.bounds.height {
-					
-					let distance = panGesture.translation(in: self).y
-					
+
 					if distance < height * 0.1 {
 						
 						snapBackCell()
@@ -102,12 +94,33 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 		
 		let dragHeight = openedBounds
 			.height - (openedBounds.height * percentageOfHeight)
+
+		let dragOriginX: CGFloat
+		let dragOriginY: CGFloat
 		
-		let dragOriginX = openedCenter.x - (openedCenter.x * percentageOfHeight)
+		// take into account if if the original center is greater than or less than the current x/y origin
+		if originalCenter.x < openedCenter.x {
+			
+			let difference = openedCenter.x - originalCenter.x
+			dragOriginX = openedCenter.x - (difference * percentageOfHeight)
+		} else {
+			
+			let difference = originalCenter.x - openedCenter.x
+			dragOriginX = openedCenter.x + (difference * percentageOfHeight)
+		}
 		
-		let dragOriginHeight = openedCenter.y + (openedCenter.y * percentageOfHeight)
-		
-		self.bounds = CGRect(x: dragOriginX, y: dragOriginHeight, width: dragWidth, height: dragHeight)
+		if originalCenter.y < openedCenter.y {
+			
+			let difference = openedCenter.y - originalCenter.y
+			
+			dragOriginY = openedCenter.y - (difference * percentageOfHeight)
+		} else {
+			
+			let difference = originalCenter.y - openedCenter.y
+			dragOriginY = openedCenter.y + (difference * percentageOfHeight)
+		}
+
+		self.bounds = CGRect(x: dragOriginX, y: dragOriginY, width: dragWidth, height: dragHeight)
 		
 		self.layoutIfNeeded()
 	}
