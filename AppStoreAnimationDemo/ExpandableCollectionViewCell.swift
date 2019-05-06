@@ -26,6 +26,9 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 	var springVelocity: CGFloat = 0.0
 	
 	var previousY: CGFloat = 0.0
+	
+	// threshold expressed in percentage of when the snapping should occure
+	var dragThreshold: CGFloat = 0.15
 
 	weak var collectionView: UICollectionView?
 	
@@ -45,7 +48,6 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 	
 	private func setupGesture() {
 
-
 		self.addGestureRecognizer(panGesture)
 		panGesture.addTarget(self, action: #selector(cellGestured))
 	}
@@ -63,7 +65,7 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 
 				if let height = collectionView?.bounds.height {
 					
-					if distance > height * 0.1 {
+					if distance > height * dragThreshold {
 						revertCell()
 					} else {
 						dragCell(panDistance: distance, collectionViewHeight: height)
@@ -74,7 +76,7 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 				
 				if let height = collectionView?.bounds.height {
 
-					if distance < height * 0.1 {
+					if distance < height * dragThreshold {
 						
 						snapBackCell()
 					}
@@ -94,6 +96,8 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 		
 		let dragHeight = openedBounds
 			.height - (openedBounds.height * percentageOfHeight)
+		
+		closeButton.alpha = 1 - percentageOfHeight
 
 		let dragOriginX: CGFloat
 		let dragOriginY: CGFloat
@@ -112,7 +116,6 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 		if originalCenter.y < openedCenter.y {
 			
 			let difference = openedCenter.y - originalCenter.y
-			
 			dragOriginY = openedCenter.y - (difference * percentageOfHeight)
 		} else {
 			
@@ -121,6 +124,9 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 		}
 
 		self.bounds = CGRect(x: dragOriginX, y: dragOriginY, width: dragWidth, height: dragHeight)
+		
+		// this will move the center towards where the original was
+		self.center = CGPoint(x: dragOriginX, y: dragOriginY)
 		
 		self.layoutIfNeeded()
 	}
@@ -136,9 +142,10 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 			self.bounds = self.openedBounds
 			self.center = self.openedCenter
 			
+			self.closeButton.alpha = 1
+			
 			self.layoutIfNeeded()
 		})
-	
 	}
 	
 	private func revertCell() {
