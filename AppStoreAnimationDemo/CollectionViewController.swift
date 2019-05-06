@@ -72,6 +72,7 @@ class CollectionViewController: UICollectionViewController {
 
 		if !currentCell.isOpen {
 			
+			//TODO: Refactor to make it more efficient
 			isOpen.toggle()
 			currentCell.isOpen.toggle()
 			cellBounds = currentCell.bounds
@@ -92,9 +93,16 @@ class CollectionViewController: UICollectionViewController {
 				// use this because we are changing the height constraint for the image
 				currentCell.layoutIfNeeded()
 				
+				
+				let currentCenterPoint = self.getCurrentCenterPoint()
+				
 				currentCell.bounds = collectionView.bounds
-				currentCell.center = self.getCurrentCenterPoint()
-
+				currentCell.openedBounds = collectionView.bounds
+				
+				currentCell.center = currentCenterPoint
+				currentCell.openedCenter = currentCenterPoint
+				
+				
 				// ensures no cells below that will overlap this cell.
 				collectionView.bringSubviewToFront(currentCell)
 
