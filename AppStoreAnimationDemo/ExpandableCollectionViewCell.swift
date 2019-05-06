@@ -69,26 +69,10 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 				if let height = collectionView?.bounds.height {
 					
 					if distance > height * 0.1 {
-						
+
 						revertCell()
 					} else {
-						
-						let percentageOfHeight = distance / height
-						
-						let dragWidth = openedBounds.width - (openedBounds.width * percentageOfHeight)
-						
-						let dragHeight = openedBounds
-							.height - (openedBounds.height * percentageOfHeight)
-						
-						let dragOriginX = openedCenter.x - (openedCenter.x * percentageOfHeight)
-						
-						let dragOriginHeight = openedCenter.y + (openedCenter.y * percentageOfHeight)
-						
-						print("new Origin X: \(dragOriginX)")
-						
-						self.bounds = CGRect(x: dragOriginX, y: dragOriginHeight, width: dragWidth, height: dragHeight)
-						
-						self.layoutIfNeeded()
+						dragCell(panDistance: distance, collectionViewHeight: height)
 					}
 				}
 				
@@ -108,6 +92,24 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 				break
 			}
 		}
+	}
+	
+	private func dragCell(panDistance distance: CGFloat, collectionViewHeight height: CGFloat) {
+		
+		let percentageOfHeight = distance / height
+		
+		let dragWidth = openedBounds.width - (openedBounds.width * percentageOfHeight)
+		
+		let dragHeight = openedBounds
+			.height - (openedBounds.height * percentageOfHeight)
+		
+		let dragOriginX = openedCenter.x - (openedCenter.x * percentageOfHeight)
+		
+		let dragOriginHeight = openedCenter.y + (openedCenter.y * percentageOfHeight)
+		
+		self.bounds = CGRect(x: dragOriginX, y: dragOriginHeight, width: dragWidth, height: dragHeight)
+		
+		self.layoutIfNeeded()
 	}
 	
 	private func snapBackCell() {
