@@ -59,6 +59,8 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 
 			case .began:
 				print("began")
+				
+				print("orginX: \(originalCenter.x)")
 
 			case .changed:
 
@@ -69,17 +71,59 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 					if distance > height * 0.1 {
 						
 						revertCell()
+					} else {
+						
+						let percentageOfHeight = distance / height
+						
+						let dragWidth = openedBounds.width - (openedBounds.width * percentageOfHeight)
+						
+						let dragHeight = openedBounds
+							.height - (openedBounds.height * percentageOfHeight)
+						
+						let dragOriginX = openedCenter.x - (openedCenter.x * percentageOfHeight)
+						
+						let dragOriginHeight = openedCenter.y + (openedCenter.y * percentageOfHeight)
+						
+						print("new Origin X: \(dragOriginX)")
+						
+						self.bounds = CGRect(x: dragOriginX, y: dragOriginHeight, width: dragWidth, height: dragHeight)
+						
+						self.layoutIfNeeded()
 					}
-
-					self.layoutIfNeeded()
 				}
-	
-				self.layoutIfNeeded()
+				
+			case .ended:
+				
+				if let height = collectionView?.bounds.height {
+					
+					let distance = panGesture.translation(in: self).y
+					
+					if distance < height * 0.1 {
+						
+						snapBackCell()
+					}
+				}
 				
 			default:
 				break
 			}
 		}
+	}
+	
+	private func snapBackCell() {
+	
+		print("snapped back")
+		
+		isOpen = true
+		
+		UIView.animate(withDuration: 0.3, delay: 0.0, usingSpringWithDamping: springDamping, initialSpringVelocity: springVelocity, options: .curveEaseInOut, animations: {
+			
+			self.bounds = self.openedBounds
+			self.center = self.openedCenter
+			
+			self.layoutIfNeeded()
+		})
+	
 	}
 	
 	private func revertCell() {
