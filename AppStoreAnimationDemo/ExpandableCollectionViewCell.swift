@@ -84,7 +84,7 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 		containterView.layer.shadowColor = UIColor.black.cgColor
 		containterView.layer.shadowRadius = 4
 		containterView.layer.shadowOpacity = 0.3
-		
+
 		closeButton.layer.backgroundColor = UIColor.lightGray.cgColor
 		closeButton.layer.cornerRadius = closeButton.bounds.width / 2
 

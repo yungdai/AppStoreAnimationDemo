@@ -48,12 +48,12 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehx-3f-TpH">
-                                                            <rect key="frame" x="310" y="20" width="45" height="45"/>
+                                                            <rect key="frame" x="335" y="20" width="20" height="20"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="45" id="67y-h6-h6O"/>
+                                                                <constraint firstAttribute="width" constant="20" id="67y-h6-h6O"/>
                                                                 <constraint firstAttribute="width" secondItem="ehx-3f-TpH" secondAttribute="height" multiplier="1:1" id="CvF-IQ-tBr"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                                             <state key="normal" title="X">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>

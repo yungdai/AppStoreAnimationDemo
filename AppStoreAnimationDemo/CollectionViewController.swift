@@ -30,10 +30,7 @@ class CollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Do any additional setup after loading the view.
+		UIApplication.shared.statusBarView?.backgroundColor = UIColor.white
     }
 	
 	override func viewDidAppear(_ animated: Bool) {
@@ -90,6 +87,7 @@ class CollectionViewController: UICollectionViewController {
 	override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
 		return .slide
 	}
+	
 	
 }
 
@@ -155,5 +153,16 @@ extension UILabel {
 		
 		self.layer.add(animation, forKey: nil)
 		self.text = text
+	}
+}
+
+extension UIApplication {
+	
+	/// Handy helper to get access to the statusBar's view
+	var statusBarView: UIView? {
+		guard let statusBarView = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else {
+			return nil
+		}
+		return statusBarView
 	}
 }
