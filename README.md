@@ -3,3 +3,5 @@ Demo of how to create the Apple Appstore animation when selecting a UICollection
 
 
 This objective of this demo app is to show how to use UICollectionView to create an experience where you can show cells that can expand and show more details like the Apple App Store.
+
+This will be used as a basis for a future framework 
