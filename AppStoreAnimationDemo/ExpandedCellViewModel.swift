@@ -8,8 +8,7 @@
 import UIKit
 
 struct ExpandedCellViewModel {
-	
-	
+
 	var isOpen = false
 	let originalBounds: CGRect
 	let originalCenter: CGPoint
@@ -36,4 +35,5 @@ struct ExpandedCellViewModel {
 		self.animationDuration = animationDuration
 		self.collectionView = collectionView
 	}
+	
 }

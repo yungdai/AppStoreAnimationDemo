@@ -78,7 +78,7 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 		containterView.layer.cornerRadius = 15
 		containterView.layer.shadowColor = UIColor.black.cgColor
 		containterView.layer.shadowRadius = 4
-		containterView.layer.shadowOpacity = 0.5
+		containterView.layer.shadowOpacity = 0.3
 		
 		headerView.layer.maskedCorners = CACornerMask(arrayLiteral: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
 		headerView.layer.cornerRadius = 15
@@ -98,7 +98,7 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 			let distance = panGesture.translation(in: self).y
 			
 			switch panGesture.state {
-
+				
 			case .changed:
 
 				if let height = collectionView?.bounds.height {
@@ -129,6 +129,8 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 	 func openCell() {
 		
 		isOpen.toggle()
+		// disable scrolling so you can't move the cell
+		self.collectionView?.isScrollEnabled = false
 		
 		UIView.animate(withDuration: TimeInterval(animationDuration), delay: 0.0, usingSpringWithDamping: springDamping, initialSpringVelocity: springVelocity, options: .curveEaseInOut, animations: {
 			
@@ -144,10 +146,7 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 			
 			self.bodyText.alpha = 1
 			self.headerHeightConstraint.constant = self.headerHeightConstraint.constant * 2
-			
-			// use this because we are changing the height constraint for the image
-			self.layoutIfNeeded()
-			
+
 			self.findOutMoreLabel.animateText(text: "New ways to open cells!", duration: self.animationDuration)
 			
 			let currentCenterPoint = collectionView.getCurrentCenterPoint()
@@ -160,10 +159,9 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 			
 			// ensures no cells below that will overlap this cell.
 			collectionView.bringSubviewToFront(self)
-			
-			// disable scrolling so you can't move the cell
-			collectionView.isScrollEnabled = false
-			
+
+			// use this because we are changing the height constraint for the image
+			self.layoutIfNeeded()
 		}, completion: nil)
 		
 	}
@@ -242,16 +240,15 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 			self.closeButton.alpha = 0
 			
 			self.bodyText.alpha = 0
-			
-			self.collectionView?.isScrollEnabled = true
-			
+
 			self.headerHeightConstraint.constant = self.headerHeightConstraint.constant / 2
-			
-			
+
 			self.findOutMoreLabel.animateText(text: "Find out more:", duration: self.animationDuration)
 			// used to layout the new height constraint of the image
 			self.layoutIfNeeded()
 		})
+		
+		self.collectionView?.isScrollEnabled = true
 	}
 	
 	@IBAction func closeButtonPressed(_ sender: Any) {

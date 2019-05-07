@@ -32,9 +32,8 @@ class CollectionViewController: UICollectionViewController {
 		super.viewDidAppear(animated)
 
 		// this is to ensure if you leave and come back that if the cell is opened you still won't be able to scroll
-		if isOpen {
-			collectionView.isScrollEnabled = false
-		}
+		collectionView.isScrollEnabled = (isOpen) ? false : true
+	
 	}
 
     // MARK: UICollectionViewDataSource
@@ -71,7 +70,7 @@ class CollectionViewController: UICollectionViewController {
 		// get the current cell
 		guard let currentCell = collectionView.cellForItem(at: indexPath) as? ExpandableCollectionViewCell else { return }
 
-		if !currentCell.isOpen {
+		if !isOpen {
 			currentCell.openCell()
 		}
 		
@@ -87,6 +86,11 @@ extension CollectionViewController: UICollectionViewDelegateFlowLayout {
 		let cellWidth = (UIScreen.main.bounds.width - (buffer * cellsPerRow)) / cellsPerRow
 		
 		return CGSize(width: cellWidth, height: cellHeight)
+	}
+	
+	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+
+		return UIEdgeInsets(top: 0, left: 5, bottom: 10, right: 5)
 	}
 }
 
