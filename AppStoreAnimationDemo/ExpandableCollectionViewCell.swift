@@ -7,6 +7,10 @@
 
 import UIKit
 
+public enum GestureFocus {
+	case onCell, onCollection
+}
+
 class ExpandableCollectionViewCell: UICollectionViewCell {
     
 	@IBOutlet var headerHeightConstraint: NSLayoutConstraint!
@@ -88,7 +92,21 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 
 		self.addGestureRecognizer(panGesture)
 		panGesture.addTarget(self, action: #selector(cellGestured))
+		panGesture.isEnabled = false
 	}
+	
+	private func configureGesture(on focus: GestureFocus) {
+		
+		switch focus {
+		case .onCell:
+			panGesture.isEnabled = true
+			collectionView?.isScrollEnabled = false
+		case .onCollection:
+			panGesture.isEnabled = false
+			collectionView?.isScrollEnabled = true
+		}
+	}
+	
 	
 	@objc
 	private func cellGestured() {
@@ -101,15 +119,17 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 				
 			case .changed:
 
-				if let height = collectionView?.bounds.height {
-					
-					if distance > height * dragThreshold {
-						closeCell()
-					} else {
-						dragCell(panDistance: distance, collectionViewHeight: height)
+				if distance > 0 {
+					if let height = collectionView?.bounds.height {
+						
+						if distance > height * dragThreshold {
+							closeCell()
+						} else {
+							dragCell(panDistance: distance, collectionViewHeight: height)
+						}
 					}
 				}
-				
+
 			case .ended:
 				
 				if let height = collectionView?.bounds.height {
@@ -129,8 +149,8 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 	 func openCell() {
 		
 		isOpen.toggle()
-		// disable scrolling so you can't move the cell
-		self.collectionView?.isScrollEnabled = false
+
+		configureGesture(on: .onCell)
 		
 		UIView.animate(withDuration: TimeInterval(animationDuration), delay: 0.0, usingSpringWithDamping: springDamping, initialSpringVelocity: springVelocity, options: .curveEaseInOut, animations: {
 			
@@ -231,6 +251,8 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 		
 		isOpen.toggle()
 		
+		configureGesture(on: .onCollection)
+		
 		UIView.animate(withDuration: animationDuration, delay: 0.0, usingSpringWithDamping: springDamping, initialSpringVelocity: springVelocity, options: .curveEaseInOut, animations: {
 			
 			self.bounds = self.originalBounds
@@ -248,7 +270,7 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 			self.layoutIfNeeded()
 		})
 		
-		self.collectionView?.isScrollEnabled = true
+		
 	}
 	
 	@IBAction func closeButtonPressed(_ sender: Any) {

@@ -33,7 +33,8 @@ class CollectionViewController: UICollectionViewController {
 
 		// this is to ensure if you leave and come back that if the cell is opened you still won't be able to scroll
 		collectionView.isScrollEnabled = (isOpen) ? false : true
-	
+		
+		print("viewDidAppear isScrollEnabled: \(collectionView.isScrollEnabled)")
 	}
 
     // MARK: UICollectionViewDataSource
