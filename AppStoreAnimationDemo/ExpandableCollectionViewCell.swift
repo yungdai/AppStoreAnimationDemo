@@ -24,25 +24,25 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 	
 	var isOpen = false
 	
-	var originalBounds: CGRect = CGRect.zero
-	var originalCenter: CGPoint = CGPoint.zero
+	private var originalBounds: CGRect = CGRect.zero
+	private var originalCenter: CGPoint = CGPoint.zero
 	
-	var openedBounds: CGRect = CGRect.zero
-	var openedCenter: CGPoint = CGPoint.zero
+	private var openedBounds: CGRect = CGRect.zero
+	private var openedCenter: CGPoint = CGPoint.zero
 	
-	var springDamping: CGFloat = 0.0
-	var springVelocity: CGFloat = 0.0
+	private var springDamping: CGFloat = 0.0
+	private var springVelocity: CGFloat = 0.0
 	
-	var animationDuration: TimeInterval = 0.0
+	private var animationDuration: TimeInterval = 0.0
 	
 	// threshold expressed in percentage of when the snapping should occure
-	var dragThreshold: CGFloat = 0.15
+	private var dragThreshold: CGFloat = 0.15
 
-	weak var collectionView: UICollectionView?
+	private weak var collectionView: UICollectionView?
 	
-	var viewModel: ExpandedCellViewModel?
-	
-	var panGesture = UIPanGestureRecognizer()
+	private var viewModel: ExpandedCellViewModel?
+	private var parentVC: CollectionViewController?
+	private var panGesture = UIPanGestureRecognizer()
 
 	func configure(with viewModel: ExpandedCellViewModel?) {
 
@@ -55,6 +55,7 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 		springVelocity = viewModel.springVelocity
 		animationDuration = viewModel.animationDuration
 		collectionView = viewModel.collectionView
+		parentVC = viewModel.parentVC
 	}
 	
 	override init(frame: CGRect) {
@@ -84,6 +85,9 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 		containterView.layer.shadowRadius = 4
 		containterView.layer.shadowOpacity = 0.3
 		
+		closeButton.layer.backgroundColor = UIColor.lightGray.cgColor
+		closeButton.layer.cornerRadius = closeButton.bounds.width / 2
+
 		headerView.layer.maskedCorners = CACornerMask(arrayLiteral: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
 		headerView.layer.cornerRadius = 15
 	}
@@ -146,13 +150,15 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 		}
 	}
 	
-	 func openCell() {
-		
-		isOpen.toggle()
+	func openCell() {
 
+		isOpen.toggle()
+		parentVC?.statusBarShoudlBeHidden = true
+		parentVC?.isOpen = true
 		configureGesture(on: .onCell)
 		
 		UIView.animate(withDuration: TimeInterval(animationDuration), delay: 0.0, usingSpringWithDamping: springDamping, initialSpringVelocity: springVelocity, options: .curveEaseInOut, animations: {
+
 			
 			guard let collectionView = self.collectionView else { return }
 			
@@ -250,6 +256,8 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 	private func closeCell() {
 		
 		isOpen.toggle()
+		parentVC?.statusBarShoudlBeHidden = false
+		parentVC?.isOpen = false
 		
 		configureGesture(on: .onCollection)
 		

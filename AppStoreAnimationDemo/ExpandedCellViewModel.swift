@@ -17,13 +17,14 @@ struct ExpandedCellViewModel {
 	let springDamping: CGFloat
 	let springVelocity: CGFloat
 	let animationDuration: TimeInterval
+	weak var parentVC: CollectionViewController?
 	weak var collectionView: UICollectionView?
 	
 	init(isOpen: Bool, originalBounds: CGRect, originalCenter: CGPoint,
 		 openedBounds: CGRect, openedCenter: CGPoint,
 		 springDamping: CGFloat,
 		 springVelocity: CGFloat, animationDuration: TimeInterval,
-		 collectionView: UICollectionView) {
+		 collectionView: UICollectionView, parentVC: CollectionViewController) {
 		
 		self.isOpen = isOpen
 		self.originalBounds = originalBounds
@@ -34,6 +35,7 @@ struct ExpandedCellViewModel {
 		self.springVelocity = springVelocity
 		self.animationDuration = animationDuration
 		self.collectionView = collectionView
+		self.parentVC = parentVC
 	}
 	
 }

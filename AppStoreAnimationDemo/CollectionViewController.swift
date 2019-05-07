@@ -18,6 +18,14 @@ class CollectionViewController: UICollectionViewController {
 	let animationDuration: TimeInterval = 1
 	
 	var isOpen = false
+	
+	var statusBarShoudlBeHidden = false {
+		didSet {
+			UIView.animate(withDuration: 0.3) {
+				self.setNeedsStatusBarAppearanceUpdate()
+			}
+		}
+	}
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,9 +66,8 @@ class CollectionViewController: UICollectionViewController {
 											  springDamping: springDamping,
 											  springVelocity: springVelocity,
 											  animationDuration: animationDuration,
-											  collectionView: collectionView)
-		
-		
+											  collectionView: collectionView, parentVC: self)
+
 		cell.configure(with: cellModel)
 
         return cell
@@ -71,12 +78,19 @@ class CollectionViewController: UICollectionViewController {
 		// get the current cell
 		guard let currentCell = collectionView.cellForItem(at: indexPath) as? ExpandableCollectionViewCell else { return }
 
-		if !isOpen {
+		if !currentCell.isOpen {
 			currentCell.openCell()
 		}
-		
-		isOpen = currentCell.isOpen
 	}
+	
+	override var prefersStatusBarHidden: Bool {
+		return statusBarShoudlBeHidden
+	}
+	
+	override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
+		return .slide
+	}
+	
 }
 
 extension CollectionViewController: UICollectionViewDelegateFlowLayout {
