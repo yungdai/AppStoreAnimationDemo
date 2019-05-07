@@ -15,6 +15,7 @@
 		9FEB90792279D94C008BF116 /* AppStoreAnimationDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB90782279D94C008BF116 /* AppStoreAnimationDemoUITests.swift */; };
 		9FEB90872279E3E6008BF116 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB90862279E3E6008BF116 /* CollectionViewController.swift */; };
 		9FEB908F227C8D15008BF116 /* ExpandableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB908E227C8D15008BF116 /* ExpandableCollectionViewCell.swift */; };
+		9FEB90962281B92D008BF116 /* ExpandedCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB90952281B92D008BF116 /* ExpandedCellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9FEB907A2279D94C008BF116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FEB90862279E3E6008BF116 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		9FEB908E227C8D15008BF116 /* ExpandableCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableCollectionViewCell.swift; sourceTree = "<group>"; };
+		9FEB90952281B92D008BF116 /* ExpandedCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedCellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				9FEB905F2279D94C008BF116 /* Assets.xcassets */,
 				9FEB90612279D94C008BF116 /* LaunchScreen.storyboard */,
 				9FEB90642279D94C008BF116 /* Info.plist */,
+				9FEB90952281B92D008BF116 /* ExpandedCellViewModel.swift */,
 				9FEB908E227C8D15008BF116 /* ExpandableCollectionViewCell.swift */,
 				9FEB90862279E3E6008BF116 /* CollectionViewController.swift */,
 			);
@@ -260,6 +263,7 @@
 			files = (
 				9FEB908F227C8D15008BF116 /* ExpandableCollectionViewCell.swift in Sources */,
 				9FEB90872279E3E6008BF116 /* CollectionViewController.swift in Sources */,
+				9FEB90962281B92D008BF116 /* ExpandedCellViewModel.swift in Sources */,
 				9FEB90592279D94A008BF116 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

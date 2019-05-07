@@ -11,6 +11,8 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
     
 	@IBOutlet var headerHeightConstraint: NSLayoutConstraint!
 	
+	@IBOutlet weak var headerView: UIView!
+	@IBOutlet weak var containterView: UIView!
 	@IBOutlet weak var titleFont: UILabel!
 	@IBOutlet weak var closeButton: UIButton!
 	@IBOutlet weak var bodyText: UILabel!
@@ -29,22 +31,34 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 	
 	var animationDuration: TimeInterval = 0.0
 	
-	var previousY: CGFloat = 0.0
-
-	
 	// threshold expressed in percentage of when the snapping should occure
 	var dragThreshold: CGFloat = 0.15
 
 	weak var collectionView: UICollectionView?
 	
+	var viewModel: ExpandedCellViewModel?
+	
 	var panGesture = UIPanGestureRecognizer()
+
+	func configure(with viewModel: ExpandedCellViewModel?) {
+
+		guard let viewModel = viewModel else { return }
+		isOpen = viewModel.isOpen
+		originalBounds = viewModel.originalBounds
+		originalCenter = viewModel.originalCenter
+		openedBounds = viewModel.openedBounds
+		springDamping = viewModel.springDamping
+		springVelocity = viewModel.springVelocity
+		animationDuration = viewModel.animationDuration
+		collectionView = viewModel.collectionView
+	}
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
-		
+
 		setupGesture()
 	}
-	
+
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 
@@ -52,7 +66,22 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 	}
 	
 	override func awakeFromNib() {
+		
+		setup()
+	}
+	
+	private func setup() {
+		
 		bodyText.alpha = 0
+		closeButton.alpha = 0
+		closeButton.isHidden = true
+		containterView.layer.cornerRadius = 15
+		containterView.layer.shadowColor = UIColor.black.cgColor
+		containterView.layer.shadowRadius = 4
+		containterView.layer.shadowOpacity = 0.5
+		
+		headerView.layer.maskedCorners = CACornerMask(arrayLiteral: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
+		headerView.layer.cornerRadius = 15
 	}
 
 	private func setupGesture() {
@@ -75,7 +104,7 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 				if let height = collectionView?.bounds.height {
 					
 					if distance > height * dragThreshold {
-						revertCell()
+						closeCell()
 					} else {
 						dragCell(panDistance: distance, collectionViewHeight: height)
 					}
@@ -95,6 +124,48 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 				break
 			}
 		}
+	}
+	
+	 func openCell() {
+		
+		isOpen.toggle()
+		
+		UIView.animate(withDuration: TimeInterval(animationDuration), delay: 0.0, usingSpringWithDamping: springDamping, initialSpringVelocity: springVelocity, options: .curveEaseInOut, animations: {
+			
+			guard let collectionView = self.collectionView else { return }
+			
+			// fixes the offset when you first start because you will have an offset -0 for y
+			if collectionView.contentOffset.y < 0 {
+				collectionView.contentOffset.y = 0
+			}
+			
+			self.closeButton.isHidden = false
+			self.closeButton.alpha = 1
+			
+			self.bodyText.alpha = 1
+			self.headerHeightConstraint.constant = self.headerHeightConstraint.constant * 2
+			
+			// use this because we are changing the height constraint for the image
+			self.layoutIfNeeded()
+			
+			self.findOutMoreLabel.animateText(text: "New ways to open cells!", duration: self.animationDuration)
+			
+			let currentCenterPoint = collectionView.getCurrentCenterPoint()
+
+			self.bounds = collectionView.bounds
+			self.openedBounds = collectionView.bounds
+			
+			self.center = currentCenterPoint
+			self.openedCenter = currentCenterPoint
+			
+			// ensures no cells below that will overlap this cell.
+			collectionView.bringSubviewToFront(self)
+			
+			// disable scrolling so you can't move the cell
+			collectionView.isScrollEnabled = false
+			
+		}, completion: nil)
+		
 	}
 	
 	private func dragCell(panDistance distance: CGFloat, collectionViewHeight height: CGFloat) {
@@ -158,7 +229,7 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 		})
 	}
 	
-	private func revertCell() {
+	private func closeCell() {
 		
 		isOpen.toggle()
 		
@@ -185,7 +256,7 @@ class ExpandableCollectionViewCell: UICollectionViewCell {
 	
 	@IBAction func closeButtonPressed(_ sender: Any) {
 		
-		revertCell()
+		closeCell()
 	}
 }
 
