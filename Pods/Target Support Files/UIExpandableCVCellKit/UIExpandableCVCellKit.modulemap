@@ -1,0 +1,6 @@
+framework module UIExpandableCVCellKit {
+  umbrella header "UIExpandableCVCellKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
