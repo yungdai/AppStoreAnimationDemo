@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UIExpandableCVCellKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

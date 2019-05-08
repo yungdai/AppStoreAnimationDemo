@@ -6,10 +6,10 @@
 //
 
 import UIKit
+import UIExpandableCVCellKit
 
 class ExpandableCollectionViewCell: UICollectionViewCell, ExpandedCellProtocol {
-	
-    
+
 	@IBOutlet var headerHeightConstraint: NSLayoutConstraint!
 	
 	@IBOutlet weak var headerView: UIView!

@@ -1,0 +1,11 @@
+framework module UIExpandableCVCellKit {
+  umbrella header "UIExpandableCVCellKit.h"
+
+  export *
+  module * { export * }
+}
+
+module UIExpandableCVCellKit.Swift {
+    header "UIExpandableCVCellKit-Swift.h"
+    requires objc
+}

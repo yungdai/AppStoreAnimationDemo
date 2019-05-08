@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import UIExpandableCVCellKit
 
 private let reuseIdentifier = "Cell"
 

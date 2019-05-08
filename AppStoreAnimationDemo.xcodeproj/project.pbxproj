@@ -15,10 +15,9 @@
 		9FEB90792279D94C008BF116 /* AppStoreAnimationDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB90782279D94C008BF116 /* AppStoreAnimationDemoUITests.swift */; };
 		9FEB90872279E3E6008BF116 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB90862279E3E6008BF116 /* CollectionViewController.swift */; };
 		9FEB908F227C8D15008BF116 /* ExpandableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB908E227C8D15008BF116 /* ExpandableCollectionViewCell.swift */; };
-		9FEB90962281B92D008BF116 /* ExpandedCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB90952281B92D008BF116 /* ExpandedCellViewModel.swift */; };
 		9FEB90982281CCD6008BF116 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB90972281CCD6008BF116 /* README.md */; };
-		9FEB909C22832315008BF116 /* ExpandedCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB909B22832315008BF116 /* ExpandedCellProtocol.swift */; };
-		9FEB909F22832D22008BF116 /* ExpandedCellCollectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB909E22832D22008BF116 /* ExpandedCellCollectionProtocol.swift */; };
+		9FEB913B228356D4008BF116 /* UIExpandableCVCellKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FEB913A228356D4008BF116 /* UIExpandableCVCellKit.framework */; };
+		9FEB913C228356D4008BF116 /* UIExpandableCVCellKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9FEB913A228356D4008BF116 /* UIExpandableCVCellKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +37,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		9FEB913622835592008BF116 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9FEB913C228356D4008BF116 /* UIExpandableCVCellKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		9FEB90552279D94A008BF116 /* AppStoreAnimationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppStoreAnimationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FEB90582279D94A008BF116 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,10 +66,8 @@
 		9FEB907A2279D94C008BF116 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9FEB90862279E3E6008BF116 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		9FEB908E227C8D15008BF116 /* ExpandableCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableCollectionViewCell.swift; sourceTree = "<group>"; };
-		9FEB90952281B92D008BF116 /* ExpandedCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedCellViewModel.swift; sourceTree = "<group>"; };
 		9FEB90972281CCD6008BF116 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		9FEB909B22832315008BF116 /* ExpandedCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedCellProtocol.swift; sourceTree = "<group>"; };
-		9FEB909E22832D22008BF116 /* ExpandedCellCollectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedCellCollectionProtocol.swift; sourceTree = "<group>"; };
+		9FEB913A228356D4008BF116 /* UIExpandableCVCellKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UIExpandableCVCellKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FEB913B228356D4008BF116 /* UIExpandableCVCellKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +99,7 @@
 		9FEB904C2279D94A008BF116 = {
 			isa = PBXGroup;
 			children = (
+				9FEB913A228356D4008BF116 /* UIExpandableCVCellKit.framework */,
 				9FEB90572279D94A008BF116 /* AppStoreAnimationDemo */,
 				9FEB906C2279D94C008BF116 /* AppStoreAnimationDemoTests */,
 				9FEB90772279D94C008BF116 /* AppStoreAnimationDemoUITests */,
@@ -113,7 +126,6 @@
 				9FEB905F2279D94C008BF116 /* Assets.xcassets */,
 				9FEB90612279D94C008BF116 /* LaunchScreen.storyboard */,
 				9FEB90642279D94C008BF116 /* Info.plist */,
-				9FEB90952281B92D008BF116 /* ExpandedCellViewModel.swift */,
 				9FEB908E227C8D15008BF116 /* ExpandableCollectionViewCell.swift */,
 				9FEB90862279E3E6008BF116 /* CollectionViewController.swift */,
 				9FEB909D228323B8008BF116 /* ExpandedCellInteraction */,
@@ -142,8 +154,6 @@
 		9FEB909D228323B8008BF116 /* ExpandedCellInteraction */ = {
 			isa = PBXGroup;
 			children = (
-				9FEB909B22832315008BF116 /* ExpandedCellProtocol.swift */,
-				9FEB909E22832D22008BF116 /* ExpandedCellCollectionProtocol.swift */,
 			);
 			path = ExpandedCellInteraction;
 			sourceTree = "<group>";
@@ -158,6 +168,7 @@
 				9FEB90512279D94A008BF116 /* Sources */,
 				9FEB90522279D94A008BF116 /* Frameworks */,
 				9FEB90532279D94A008BF116 /* Resources */,
+				9FEB913622835592008BF116 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -280,10 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FEB908F227C8D15008BF116 /* ExpandableCollectionViewCell.swift in Sources */,
-				9FEB909C22832315008BF116 /* ExpandedCellProtocol.swift in Sources */,
-				9FEB909F22832D22008BF116 /* ExpandedCellCollectionProtocol.swift in Sources */,
 				9FEB90872279E3E6008BF116 /* CollectionViewController.swift in Sources */,
-				9FEB90962281B92D008BF116 /* ExpandedCellViewModel.swift in Sources */,
 				9FEB90592279D94A008BF116 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -461,6 +469,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W9YJQYCY2W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = AppStoreAnimationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -479,6 +491,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = W9YJQYCY2W;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = AppStoreAnimationDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
