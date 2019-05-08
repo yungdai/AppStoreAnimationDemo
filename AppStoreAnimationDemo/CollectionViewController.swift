@@ -9,7 +9,9 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class CollectionViewController: UICollectionViewController {
+class CollectionViewController: UICollectionViewController,  ExpandedCellCollectionProtocol {
+	
+	var collectionVC: UICollectionView?
 
 	let cellsPerRow: CGFloat = 2
 	let cellHeight: CGFloat = 150
@@ -55,15 +57,13 @@ class CollectionViewController: UICollectionViewController {
 		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? ExpandableCollectionViewCell else {
 			return UICollectionViewCell() }
 		
-		let cellModel = ExpandedCellViewModel(isOpen: false,
-											  originalBounds: cell.bounds,
+		let cellModel = ExpandedCellViewModel(originalBounds: cell.bounds,
 											  originalCenter: cell.center,
 											  openedBounds: collectionView.bounds,
 											  openedCenter: collectionView.center,
 											  springDamping: springDamping,
 											  springVelocity: springVelocity,
-											  animationDuration: animationDuration,
-											  collectionView: collectionView, parentVC: self)
+											  animationDuration: animationDuration, expandedCellCollectionProtocol: self)
 
 		cell.configure(with: cellModel)
 
@@ -75,7 +75,7 @@ class CollectionViewController: UICollectionViewController {
 		// get the current cell
 		guard let currentCell = collectionView.cellForItem(at: indexPath) as? ExpandableCollectionViewCell else { return }
 
-		if !currentCell.isOpen {
+		if !isOpen {
 			currentCell.openCell()
 		}
 	}
@@ -87,8 +87,6 @@ class CollectionViewController: UICollectionViewController {
 	override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
 		return .slide
 	}
-	
-	
 }
 
 extension CollectionViewController: UICollectionViewDelegateFlowLayout {

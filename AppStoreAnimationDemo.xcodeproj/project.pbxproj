@@ -17,6 +17,8 @@
 		9FEB908F227C8D15008BF116 /* ExpandableCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB908E227C8D15008BF116 /* ExpandableCollectionViewCell.swift */; };
 		9FEB90962281B92D008BF116 /* ExpandedCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB90952281B92D008BF116 /* ExpandedCellViewModel.swift */; };
 		9FEB90982281CCD6008BF116 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9FEB90972281CCD6008BF116 /* README.md */; };
+		9FEB909C22832315008BF116 /* ExpandedCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB909B22832315008BF116 /* ExpandedCellProtocol.swift */; };
+		9FEB909F22832D22008BF116 /* ExpandedCellCollectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FEB909E22832D22008BF116 /* ExpandedCellCollectionProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		9FEB908E227C8D15008BF116 /* ExpandableCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableCollectionViewCell.swift; sourceTree = "<group>"; };
 		9FEB90952281B92D008BF116 /* ExpandedCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedCellViewModel.swift; sourceTree = "<group>"; };
 		9FEB90972281CCD6008BF116 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		9FEB909B22832315008BF116 /* ExpandedCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedCellProtocol.swift; sourceTree = "<group>"; };
+		9FEB909E22832D22008BF116 /* ExpandedCellCollectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedCellCollectionProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +116,7 @@
 				9FEB90952281B92D008BF116 /* ExpandedCellViewModel.swift */,
 				9FEB908E227C8D15008BF116 /* ExpandableCollectionViewCell.swift */,
 				9FEB90862279E3E6008BF116 /* CollectionViewController.swift */,
+				9FEB909D228323B8008BF116 /* ExpandedCellInteraction */,
 			);
 			path = AppStoreAnimationDemo;
 			sourceTree = "<group>";
@@ -132,6 +137,15 @@
 				9FEB907A2279D94C008BF116 /* Info.plist */,
 			);
 			path = AppStoreAnimationDemoUITests;
+			sourceTree = "<group>";
+		};
+		9FEB909D228323B8008BF116 /* ExpandedCellInteraction */ = {
+			isa = PBXGroup;
+			children = (
+				9FEB909B22832315008BF116 /* ExpandedCellProtocol.swift */,
+				9FEB909E22832D22008BF116 /* ExpandedCellCollectionProtocol.swift */,
+			);
+			path = ExpandedCellInteraction;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +280,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FEB908F227C8D15008BF116 /* ExpandableCollectionViewCell.swift in Sources */,
+				9FEB909C22832315008BF116 /* ExpandedCellProtocol.swift in Sources */,
+				9FEB909F22832D22008BF116 /* ExpandedCellCollectionProtocol.swift in Sources */,
 				9FEB90872279E3E6008BF116 /* CollectionViewController.swift in Sources */,
 				9FEB90962281B92D008BF116 /* ExpandedCellViewModel.swift in Sources */,
 				9FEB90592279D94A008BF116 /* AppDelegate.swift in Sources */,
