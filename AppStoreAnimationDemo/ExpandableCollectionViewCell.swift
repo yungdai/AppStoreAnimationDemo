@@ -15,6 +15,7 @@ class ExpandableCollectionViewCell: UICollectionViewCell, ExpandedCellProtocol {
 	@IBOutlet weak var bodyContainerWidthConstraint: NSLayoutConstraint!
 	@IBOutlet weak var headerView: UIView!
 	@IBOutlet weak var containterView: UIView!
+	@IBOutlet weak var contentContainerView: UIView!
 	@IBOutlet weak var titleFont: UILabel!
 	@IBOutlet weak var closeButton: UIButton!
 	@IBOutlet weak var bodyText: UILabel!
@@ -67,9 +68,8 @@ class ExpandableCollectionViewCell: UICollectionViewCell, ExpandedCellProtocol {
 
 		closeButton.layer.backgroundColor = UIColor.lightGray.cgColor
 		closeButton.layer.cornerRadius = closeButton.bounds.width / 2
-
-		headerView.layer.maskedCorners = CACornerMask(arrayLiteral: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
-		headerView.layer.cornerRadius = 15
+		
+		contentContainerView.layer.cornerRadius = 15
 		
 		let margin: CGFloat = 20.0
 		

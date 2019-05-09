@@ -142,6 +142,7 @@
                                     <outlet property="bodyText" destination="gQf-BQ-4QE" id="YIc-20-poA"/>
                                     <outlet property="closeButton" destination="ehx-3f-TpH" id="DBY-wg-liM"/>
                                     <outlet property="containterView" destination="yjf-1n-Klr" id="TIq-kn-ftf"/>
+                                    <outlet property="contentContainerView" destination="6gY-mA-dOd" id="hco-nt-ctm"/>
                                     <outlet property="findOutMoreLabel" destination="pKB-pC-V0y" id="bNb-fM-bdU"/>
                                     <outlet property="headerHeightConstraint" destination="FOT-S0-bn5" id="Gh4-iY-rPy"/>
                                     <outlet property="headerView" destination="wt6-Gm-z0F" id="v3M-Xm-wSo"/>
