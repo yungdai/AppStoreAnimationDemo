@@ -12,6 +12,7 @@ class ExpandableCollectionViewCell: UICollectionViewCell, ExpandedCellProtocol {
 
 	@IBOutlet var headerHeightConstraint: NSLayoutConstraint!
 	
+	@IBOutlet weak var bodyContainerWidthConstraint: NSLayoutConstraint!
 	@IBOutlet weak var headerView: UIView!
 	@IBOutlet weak var containterView: UIView!
 	@IBOutlet weak var titleFont: UILabel!
@@ -69,6 +70,14 @@ class ExpandableCollectionViewCell: UICollectionViewCell, ExpandedCellProtocol {
 
 		headerView.layer.maskedCorners = CACornerMask(arrayLiteral: [.layerMinXMinYCorner, .layerMaxXMinYCorner])
 		headerView.layer.cornerRadius = 15
+		
+		let margin: CGFloat = 20.0
+		
+		let textContainerWidth = self.containterView.bounds.width - (margin * 2)
+		
+		bodyContainerWidthConstraint.constant = textContainerWidth
+		
+		containterView.layoutIfNeeded()
 	}
 
 	private func setupGesture() {
@@ -97,7 +106,7 @@ class ExpandableCollectionViewCell: UICollectionViewCell, ExpandedCellProtocol {
 			self.bodyText.alpha = 1
 			self.headerHeightConstraint.constant = self.headerHeightConstraint.constant * 2
 
-			self.findOutMoreLabel.animateText(text: "New ways to open cells!", duration: self.animationDuration)
+			self.findOutMoreLabel.animateText(text: "New ways to open cells!", duration: 0.1)
 
 			// use this because we are changing the height constraint for the image
 			self.layoutIfNeeded()
@@ -131,7 +140,7 @@ class ExpandableCollectionViewCell: UICollectionViewCell, ExpandedCellProtocol {
 
 			self.headerHeightConstraint.constant = self.headerHeightConstraint.constant / 2
 
-			self.findOutMoreLabel.animateText(text: "Find out more:", duration: self.animationDuration)
+			self.findOutMoreLabel.animateText(text: "Find out more:", duration: 0.1)
 			// used to layout the new height constraint of the image
 			self.layoutIfNeeded()
 		})
