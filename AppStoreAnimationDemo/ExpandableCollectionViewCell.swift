@@ -8,7 +8,7 @@
 import UIKit
 import UIExpandableCVCellKit
 
-class ExpandableCollectionViewCell: UICollectionViewCell, ExpandedCellProtocol {
+class ExpandableCollectionViewCell: UICollectionViewCell, ExpandableCVCellProtocol {
 
 	@IBOutlet var headerHeightConstraint: NSLayoutConstraint!
 	
@@ -32,11 +32,15 @@ class ExpandableCollectionViewCell: UICollectionViewCell, ExpandedCellProtocol {
 	
 	internal var animationDuration: TimeInterval = 0.0
 	
+	internal var expandableCVProtocol: ExpandableCVProtocol?
+	
+	internal var scrollDirection: UICollectionView.ScrollDirection = .vertical
+
 	// threshold expressed in percentage of when the snapping should occure
 	internal var dragThreshold: CGFloat = 0.15
 	internal var panGesture = UIPanGestureRecognizer()
 	
-	internal var expandedCellCollectionProtocol: ExpandedCellCollectionProtocol?
+	internal var expandedCellCollectionProtocol: ExpandableCVProtocol?
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -77,7 +81,7 @@ class ExpandableCollectionViewCell: UICollectionViewCell, ExpandedCellProtocol {
 		
 		bodyContainerWidthConstraint.constant = textContainerWidth
 		
-		containterView.layoutIfNeeded()
+		contentContainerView.layoutIfNeeded()
 	}
 
 	private func setupGesture() {
@@ -93,62 +97,54 @@ class ExpandableCollectionViewCell: UICollectionViewCell, ExpandedCellProtocol {
 		cellGesturedLogic()
 	}
 	
-	func openCell() {
-
-		animateCellOpenLogic()
-		
-		UIView.animate(withDuration: TimeInterval(animationDuration), delay: 0.0, usingSpringWithDamping: springDamping, initialSpringVelocity: springVelocity, options: .curveEaseInOut, animations: {
-
-
+	func openCellHandler() -> (handler: Handler?, completion: Handler?, isAnimated: Bool) {
+		let animations = {
 			self.closeButton.isHidden = false
 			self.closeButton.alpha = 1
 			
 			self.bodyText.alpha = 1
 			self.headerHeightConstraint.constant = self.headerHeightConstraint.constant * 2
-
+			
 			self.findOutMoreLabel.animateText(text: "New ways to open cells!", duration: 0.1)
+		}
 
-			// use this because we are changing the height constraint for the image
-			self.layoutIfNeeded()
-		}, completion: nil)
-		
+		return (handler: animations, completion: nil, isAnimated: true)
 	}
 
-	internal func snapBackCell() {
 
-		snapBackLogic()
-		UIView.animate(withDuration: 0.3, delay: 0.0, usingSpringWithDamping: springDamping, initialSpringVelocity: springVelocity, options: .curveEaseInOut, animations: {
-
+	internal func snapBackCellHandler() -> (handler: Handler?, completion: Handler?, isAnimated: Bool) {
+		
+		
+		let animations = {
 			self.closeButton.alpha = 1
 			self.bodyText.alpha = 1
 			self.layoutIfNeeded()
-		})
+		}
+		
+		return (handler: animations, completion: nil, isAnimated: true)
 	}
 	
-	internal func closeCell() {
+	internal func closeCellHandler() -> (handler: Handler?, completion: Handler?, isAnimated: Bool) {
 		
-		closeCellLogic()
-		
-		// Additional logic to close the cell
-		UIView.animate(withDuration: animationDuration, delay: 0.0, usingSpringWithDamping: springDamping, initialSpringVelocity: springVelocity, options: .curveEaseInOut, animations: {
-
+		let animations = {
 			
 			self.closeButton.isHidden = true
 			self.closeButton.alpha = 0
 			
 			self.bodyText.alpha = 0
-
+			
 			self.headerHeightConstraint.constant = self.headerHeightConstraint.constant / 2
-
+			
 			self.findOutMoreLabel.animateText(text: "Find out more:", duration: 0.1)
-			// used to layout the new height constraint of the image
-			self.layoutIfNeeded()
-		})
+		}
+		
+		return (handler: animations, completion: nil, isAnimated: true)
 	}
+
 	
 	@IBAction func closeButtonPressed(_ sender: Any) {
 		
-		closeCell()
+		animateCloseCell()
 	}
 }
 

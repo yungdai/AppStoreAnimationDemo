@@ -1,5 +1,5 @@
 PODS:
-  - UIExpandableCVCellKit (0.1.01)
+  - UIExpandableCVCellKit (1.0)
 
 DEPENDENCIES:
   - UIExpandableCVCellKit
@@ -9,8 +9,8 @@ SPEC REPOS:
     - UIExpandableCVCellKit
 
 SPEC CHECKSUMS:
-  UIExpandableCVCellKit: b65907bf4d18d56cdeada29a7e9879de3c666e32
+  UIExpandableCVCellKit: 1152a9eea481022adf1e85059ebd87c5b4cea592
 
 PODFILE CHECKSUM: bf499bb09372e9e783e6ff74233c9fe135dc4925
 
-COCOAPODS: 1.7.0.rc.1
+COCOAPODS: 1.7.0.rc.2

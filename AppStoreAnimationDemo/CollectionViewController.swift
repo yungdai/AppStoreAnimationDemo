@@ -10,8 +10,8 @@ import UIExpandableCVCellKit
 
 private let reuseIdentifier = "Cell"
 
-class CollectionViewController: UICollectionViewController,  ExpandedCellCollectionProtocol {
-	
+class CollectionViewController: UICollectionViewController,  ExpandableCVProtocol {
+
 	var collectionVC: UICollectionView?
 
 	let cellsPerRow: CGFloat = 2
@@ -20,13 +20,11 @@ class CollectionViewController: UICollectionViewController,  ExpandedCellCollect
 	let springVelocity: CGFloat = 0.9
 	let animationDuration: TimeInterval = 1
 	
-	var isOpen = false
+	var isCellOpened = false
 	
 	var statusBarShoudlBeHidden = false {
 		didSet {
-			UIView.animate(withDuration: 0.3) {
-				self.setNeedsStatusBarAppearanceUpdate()
-			}
+			animateStatusBar(duration: 0.3)
 		}
 	}
 
@@ -40,7 +38,7 @@ class CollectionViewController: UICollectionViewController,  ExpandedCellCollect
 		super.viewDidAppear(animated)
 
 		// this is to ensure if you leave and come back that if the cell is opened you still won't be able to scroll
-		collectionView.isScrollEnabled = (isOpen) ? false : true
+		collectionView.isScrollEnabled = (isCellOpened) ? false : true
 		
 		print("viewDidAppear isScrollEnabled: \(collectionView.isScrollEnabled)")
 	}
@@ -55,10 +53,10 @@ class CollectionViewController: UICollectionViewController,  ExpandedCellCollect
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? ExpandableCollectionViewCell else {
+		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? ExpandableCVCellProtocol else {
 			return UICollectionViewCell() }
 		
-		let cellModel = ExpandedCellViewModel(originalBounds: cell.bounds,
+		let cellModel = ExpandableCellViewModel(originalBounds: cell.bounds,
 											  originalCenter: cell.center,
 											  openedBounds: collectionView.bounds,
 											  openedCenter: collectionView.center,
@@ -73,11 +71,10 @@ class CollectionViewController: UICollectionViewController,  ExpandedCellCollect
 
 	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-		// get the current cell
 		guard let currentCell = collectionView.cellForItem(at: indexPath) as? ExpandableCollectionViewCell else { return }
 
-		if !isOpen {
-			currentCell.openCell()
+		if !isCellOpened {
+			currentCell.animateCellOpen()
 		}
 	}
 	

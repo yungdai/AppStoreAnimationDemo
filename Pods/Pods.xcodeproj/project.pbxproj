@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1D1D2E36FCFD41940C421EB35EC12E9E /* ExpandedCellCollectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882670EF4AC02E27F0894F99CFF6970D /* ExpandedCellCollectionProtocol.swift */; };
-		1F0C13C1D92A990F5A99D7769B9E2865 /* UIExpandableCVCellKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 96A44342E85BB87EC7B32EF1AFCE6B90 /* UIExpandableCVCellKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		262D6D93AB511C3A02E91BC4EA35C1F9 /* UIExpandableCVCellKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7FEB42AA16044E69A9F09E2872A141 /* UIExpandableCVCellKit-dummy.m */; };
+		13439A0743CEC607B3373842A9902D3F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A1FB4F7B89659856FC00A39DEB362 /* Extensions.swift */; };
+		1461F33155DB0E2EEA50C33E273F8B8F /* UIExpandableCVCellKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D94EB8A3B8D1D5303B60A334FFC53230 /* UIExpandableCVCellKit-dummy.m */; };
+		1F0C13C1D92A990F5A99D7769B9E2865 /* UIExpandableCVCellKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 70173498C254553C2C245169B0B3FB65 /* UIExpandableCVCellKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C25AFDB1A3BE714AB9017FE02878AF0 /* Pods-AppStoreAnimationDemoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F2B86EEBF109279EF9F72CA9741332 /* Pods-AppStoreAnimationDemoTests-dummy.m */; };
 		625DBEA1968B48544569652470DEE7D8 /* Pods-AppStoreAnimationDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5147B6E2B5BDE839CB97F347AD1C518F /* Pods-AppStoreAnimationDemo-dummy.m */; };
 		77C3726AD64B82FED525A75934D8E28E /* Pods-AppStoreAnimationDemoUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E4A7E028834DFADD47850F20C252269 /* Pods-AppStoreAnimationDemoUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7BA63B5E5374B8FAF71C39C2CB3BCF0E /* ExpandedCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24EA7DD0E09FC126A701CFD060C31F19 /* ExpandedCellViewModel.swift */; };
-		7C6B7CB3D35764316C70AB503AE63165 /* ExpandedCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FB22B89CB774FE28B83B5687F77E01D /* ExpandedCellProtocol.swift */; };
 		85403A2A64C0B0F53D8952B495A624F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		90BB081799B9FBFB1AAE6A8476B1862F /* Pods-AppStoreAnimationDemoUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D3B840F5DE22BD54EABA20E240DB92 /* Pods-AppStoreAnimationDemoUITests-dummy.m */; };
 		9615162D5AC0B45F174E7BF3240DFE49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		A84E3E02063E8273D48BF5885D37F331 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64B9E2A2F85F0C387E838A2ECA4E87E /* Extensions.swift */; };
+		976B77C2AE8BDACA490A9B5CB7ED7083 /* ExpandableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9A7CD4094A73A34E741BBDB00DB1BE /* ExpandableCellViewModel.swift */; };
 		AA892E0FA56422DF32A11669192EE587 /* Pods-AppStoreAnimationDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE450E31E3567A07AE47A4FAECF5CE57 /* Pods-AppStoreAnimationDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B3335F908B137C5FB670E465ABE5E4C0 /* UIExpandableCVCellKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D2C98E9DE4050AAF10BB1C5196482B4F /* UIExpandableCVCellKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE1E6DB2888CA14E15382C55856CC9B1 /* ExpandableCVCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42F51192451D72AF3656D772454344B /* ExpandableCVCellProtocol.swift */; };
+		B3335F908B137C5FB670E465ABE5E4C0 /* UIExpandableCVCellKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F2FBE8CABFA4882AB2B61CF5C199C85A /* UIExpandableCVCellKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BE1F9738C8E86CA980504E55F4131E59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		BE67195FBC1ACF0E41279D171BC36D33 /* ExpandableCVProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC1173EE5BA54BDE5767BF0630B483 /* ExpandableCVProtocol.swift */; };
 		D0237AA1C1BF28A8B5BC17A47FAF2C4F /* Pods-AppStoreAnimationDemoTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F732623D7DAF316FDDAB47F0616A21B0 /* Pods-AppStoreAnimationDemoTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DF6E5F575EA5793096DB43BCA179EF66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -51,33 +51,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B9A7CD4094A73A34E741BBDB00DB1BE /* ExpandableCellViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableCellViewModel.swift; path = UIExpandableCVCellKit/ExpandableCellViewModel.swift; sourceTree = "<group>"; };
+		0FEAA41D733E977D9FAC00F80C76D936 /* UIExpandableCVCellKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UIExpandableCVCellKit-Info.plist"; sourceTree = "<group>"; };
+		11CC1173EE5BA54BDE5767BF0630B483 /* ExpandableCVProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableCVProtocol.swift; path = UIExpandableCVCellKit/ExpandableCVProtocol.swift; sourceTree = "<group>"; };
 		1E7EF759537BC17A8EF8C05D3C5964B5 /* Pods-AppStoreAnimationDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppStoreAnimationDemo-Info.plist"; sourceTree = "<group>"; };
-		24EA7DD0E09FC126A701CFD060C31F19 /* ExpandedCellViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandedCellViewModel.swift; path = UIExpandableCVCellKit/ExpandedCellViewModel.swift; sourceTree = "<group>"; };
+		2247E0BC6AE5BF92BAA87A3548A1333E /* UIExpandableCVCellKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIExpandableCVCellKit-prefix.pch"; sourceTree = "<group>"; };
 		26C1E60BED80C21C7E235E5354EB2318 /* Pods-AppStoreAnimationDemoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AppStoreAnimationDemoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		286B537496B54DF77320523C66E99102 /* Pods-AppStoreAnimationDemoTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppStoreAnimationDemoTests-Info.plist"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		339E8E8E9337680F63C116F3DA09AD14 /* Pods-AppStoreAnimationDemoUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppStoreAnimationDemoUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		37F2B86EEBF109279EF9F72CA9741332 /* Pods-AppStoreAnimationDemoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AppStoreAnimationDemoTests-dummy.m"; sourceTree = "<group>"; };
 		3E6459F89CC979169AE00584C0C1C49C /* Pods-AppStoreAnimationDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppStoreAnimationDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		425A1FB4F7B89659856FC00A39DEB362 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = UIExpandableCVCellKit/Extensions.swift; sourceTree = "<group>"; };
+		4BC7C5D1FD4497EC9E2741265A0C48F2 /* UIExpandableCVCellKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UIExpandableCVCellKit.modulemap; sourceTree = "<group>"; };
 		4D8C9ADF582B138ED2DE8F7F9254844E /* Pods-AppStoreAnimationDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppStoreAnimationDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		5147B6E2B5BDE839CB97F347AD1C518F /* Pods-AppStoreAnimationDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AppStoreAnimationDemo-dummy.m"; sourceTree = "<group>"; };
 		57A57300A7DCCF42E544CEEF596B6E30 /* Pods-AppStoreAnimationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppStoreAnimationDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		5FB22B89CB774FE28B83B5687F77E01D /* ExpandedCellProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandedCellProtocol.swift; path = UIExpandableCVCellKit/ExpandedCellProtocol.swift; sourceTree = "<group>"; };
 		604E123BB01966A40042791FC2C6295B /* Pods-AppStoreAnimationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppStoreAnimationDemo.release.xcconfig"; sourceTree = "<group>"; };
 		6334BB784DC9A6EFBB59B3A5D7FBE2CB /* Pods-AppStoreAnimationDemoTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AppStoreAnimationDemoTests.modulemap"; sourceTree = "<group>"; };
-		63CD03642AD9793CC9B1EF411423277D /* UIExpandableCVCellKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UIExpandableCVCellKit-Info.plist"; sourceTree = "<group>"; };
 		6F0B5D90576C2A40363A9D59F80E6FF2 /* Pods-AppStoreAnimationDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AppStoreAnimationDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		70173498C254553C2C245169B0B3FB65 /* UIExpandableCVCellKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UIExpandableCVCellKit.h; path = UIExpandableCVCellKit/UIExpandableCVCellKit.h; sourceTree = "<group>"; };
 		7C485A3ECE0E84AB1BD3D46C08CB8A3D /* Pods-AppStoreAnimationDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AppStoreAnimationDemo.modulemap"; sourceTree = "<group>"; };
 		87A2E483AA4DFF55121D31AD92DF22F5 /* Pods-AppStoreAnimationDemoUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AppStoreAnimationDemoUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		882670EF4AC02E27F0894F99CFF6970D /* ExpandedCellCollectionProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandedCellCollectionProtocol.swift; path = UIExpandableCVCellKit/ExpandedCellCollectionProtocol.swift; sourceTree = "<group>"; };
-		894669991A5A282EAD8BA9BDC8CA095B /* UIExpandableCVCellKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UIExpandableCVCellKit.xcconfig; sourceTree = "<group>"; };
 		8E4A7E028834DFADD47850F20C252269 /* Pods-AppStoreAnimationDemoUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AppStoreAnimationDemoUITests-umbrella.h"; sourceTree = "<group>"; };
 		8FB2E5095958BC25508E798E5B90070F /* Pods-AppStoreAnimationDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppStoreAnimationDemoTests.release.xcconfig"; sourceTree = "<group>"; };
-		96A44342E85BB87EC7B32EF1AFCE6B90 /* UIExpandableCVCellKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UIExpandableCVCellKit.h; path = UIExpandableCVCellKit/UIExpandableCVCellKit.h; sourceTree = "<group>"; };
 		9A6B1D60BC58454FF02339465B724F7D /* Pods-AppStoreAnimationDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppStoreAnimationDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		9A6DBBB7536F5BCC7A1AE9C665D6DEEB /* UIExpandableCVCellKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIExpandableCVCellKit-prefix.pch"; sourceTree = "<group>"; };
 		9B858467A41D4DEA113D0A421AD68F60 /* UIExpandableCVCellKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UIExpandableCVCellKit.framework; path = UIExpandableCVCellKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A4B9609E981DC03E8FF57623593520D7 /* UIExpandableCVCellKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UIExpandableCVCellKit.xcconfig; sourceTree = "<group>"; };
 		AB5C631D2E31E24BB73443FA1743F39C /* Pods_AppStoreAnimationDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AppStoreAnimationDemoUITests.framework; path = "Pods-AppStoreAnimationDemoUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD46E8EDC2D8B4240ECB05D5F5899F9D /* Pods-AppStoreAnimationDemoUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AppStoreAnimationDemoUITests.modulemap"; sourceTree = "<group>"; };
 		B2F79966F0CDD6E94E701387305B6896 /* Pods_AppStoreAnimationDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AppStoreAnimationDemo.framework; path = "Pods-AppStoreAnimationDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,13 +86,12 @@
 		C373EE985D95286B6996312393805A53 /* Pods-AppStoreAnimationDemoUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppStoreAnimationDemoUITests-Info.plist"; sourceTree = "<group>"; };
 		C3D3B840F5DE22BD54EABA20E240DB92 /* Pods-AppStoreAnimationDemoUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AppStoreAnimationDemoUITests-dummy.m"; sourceTree = "<group>"; };
 		C7317549784D21311960098FDDF41514 /* Pods-AppStoreAnimationDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppStoreAnimationDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
-		CE7FEB42AA16044E69A9F09E2872A141 /* UIExpandableCVCellKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIExpandableCVCellKit-dummy.m"; sourceTree = "<group>"; };
-		D2C98E9DE4050AAF10BB1C5196482B4F /* UIExpandableCVCellKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIExpandableCVCellKit-umbrella.h"; sourceTree = "<group>"; };
-		D64B9E2A2F85F0C387E838A2ECA4E87E /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = UIExpandableCVCellKit/Extensions.swift; sourceTree = "<group>"; };
 		D71207FB46B549C78FB88B55B5C2CDCD /* Pods_AppStoreAnimationDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AppStoreAnimationDemoTests.framework; path = "Pods-AppStoreAnimationDemoTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D91821F10D3A8ECA3CA3786A87C0FD1D /* Pods-AppStoreAnimationDemoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppStoreAnimationDemoTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		DD45D8E0347096D95409BA094210BDC2 /* UIExpandableCVCellKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UIExpandableCVCellKit.modulemap; sourceTree = "<group>"; };
+		D94EB8A3B8D1D5303B60A334FFC53230 /* UIExpandableCVCellKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIExpandableCVCellKit-dummy.m"; sourceTree = "<group>"; };
+		E42F51192451D72AF3656D772454344B /* ExpandableCVCellProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableCVCellProtocol.swift; path = UIExpandableCVCellKit/ExpandableCVCellProtocol.swift; sourceTree = "<group>"; };
 		EE450E31E3567A07AE47A4FAECF5CE57 /* Pods-AppStoreAnimationDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AppStoreAnimationDemo-umbrella.h"; sourceTree = "<group>"; };
+		F2FBE8CABFA4882AB2B61CF5C199C85A /* UIExpandableCVCellKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIExpandableCVCellKit-umbrella.h"; sourceTree = "<group>"; };
 		F732623D7DAF316FDDAB47F0616A21B0 /* Pods-AppStoreAnimationDemoTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AppStoreAnimationDemoTests-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,7 +134,7 @@
 		1C8E5354D2936F657D4802F2916EA856 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F23E9009ED06B3A30E7D9E5E2B56EB20 /* UIExpandableCVCellKit */,
+				5B52C4A2223A1FF602FA9AB39D5A6CC1 /* UIExpandableCVCellKit */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -147,6 +147,34 @@
 				ACF463942F13E27851B6A90379BFC5D6 /* Pods-AppStoreAnimationDemoUITests */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		39FC88E5C80F0BEA0AFEA5AF083B8944 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4BC7C5D1FD4497EC9E2741265A0C48F2 /* UIExpandableCVCellKit.modulemap */,
+				A4B9609E981DC03E8FF57623593520D7 /* UIExpandableCVCellKit.xcconfig */,
+				D94EB8A3B8D1D5303B60A334FFC53230 /* UIExpandableCVCellKit-dummy.m */,
+				0FEAA41D733E977D9FAC00F80C76D936 /* UIExpandableCVCellKit-Info.plist */,
+				2247E0BC6AE5BF92BAA87A3548A1333E /* UIExpandableCVCellKit-prefix.pch */,
+				F2FBE8CABFA4882AB2B61CF5C199C85A /* UIExpandableCVCellKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UIExpandableCVCellKit";
+			sourceTree = "<group>";
+		};
+		5B52C4A2223A1FF602FA9AB39D5A6CC1 /* UIExpandableCVCellKit */ = {
+			isa = PBXGroup;
+			children = (
+				0B9A7CD4094A73A34E741BBDB00DB1BE /* ExpandableCellViewModel.swift */,
+				E42F51192451D72AF3656D772454344B /* ExpandableCVCellProtocol.swift */,
+				11CC1173EE5BA54BDE5767BF0630B483 /* ExpandableCVProtocol.swift */,
+				425A1FB4F7B89659856FC00A39DEB362 /* Extensions.swift */,
+				70173498C254553C2C245169B0B3FB65 /* UIExpandableCVCellKit.h */,
+				39FC88E5C80F0BEA0AFEA5AF083B8944 /* Support Files */,
+			);
+			name = UIExpandableCVCellKit;
+			path = UIExpandableCVCellKit;
 			sourceTree = "<group>";
 		};
 		85614BFC70ABAB92521C4839152C327E /* Pods-AppStoreAnimationDemo */ = {
@@ -236,34 +264,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EF5CFF23FF1961C479138F854591D16F /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				DD45D8E0347096D95409BA094210BDC2 /* UIExpandableCVCellKit.modulemap */,
-				894669991A5A282EAD8BA9BDC8CA095B /* UIExpandableCVCellKit.xcconfig */,
-				CE7FEB42AA16044E69A9F09E2872A141 /* UIExpandableCVCellKit-dummy.m */,
-				63CD03642AD9793CC9B1EF411423277D /* UIExpandableCVCellKit-Info.plist */,
-				9A6DBBB7536F5BCC7A1AE9C665D6DEEB /* UIExpandableCVCellKit-prefix.pch */,
-				D2C98E9DE4050AAF10BB1C5196482B4F /* UIExpandableCVCellKit-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/UIExpandableCVCellKit";
-			sourceTree = "<group>";
-		};
-		F23E9009ED06B3A30E7D9E5E2B56EB20 /* UIExpandableCVCellKit */ = {
-			isa = PBXGroup;
-			children = (
-				882670EF4AC02E27F0894F99CFF6970D /* ExpandedCellCollectionProtocol.swift */,
-				5FB22B89CB774FE28B83B5687F77E01D /* ExpandedCellProtocol.swift */,
-				24EA7DD0E09FC126A701CFD060C31F19 /* ExpandedCellViewModel.swift */,
-				D64B9E2A2F85F0C387E838A2ECA4E87E /* Extensions.swift */,
-				96A44342E85BB87EC7B32EF1AFCE6B90 /* UIExpandableCVCellKit.h */,
-				EF5CFF23FF1961C479138F854591D16F /* Support Files */,
-			);
-			name = UIExpandableCVCellKit;
-			path = UIExpandableCVCellKit;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -346,7 +346,7 @@
 			buildConfigurationList = 60F8ADD3E5F5D8958EF24E1B514DA7CB /* Build configuration list for PBXNativeTarget "UIExpandableCVCellKit" */;
 			buildPhases = (
 				D16EFD96D1D03A9BA8FF263DDA980F41 /* Headers */,
-				1611774F2943D1337EB4DF20D830D68E /* Sources */,
+				56190575D5B72DB7A141F78207F9BF5A /* Sources */,
 				F745093DFD073F33360021DCCC37CD0C /* Frameworks */,
 				E146DD34B1E9154E377AFD83A167A4EA /* Resources */,
 			);
@@ -439,23 +439,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1611774F2943D1337EB4DF20D830D68E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1D1D2E36FCFD41940C421EB35EC12E9E /* ExpandedCellCollectionProtocol.swift in Sources */,
-				7C6B7CB3D35764316C70AB503AE63165 /* ExpandedCellProtocol.swift in Sources */,
-				7BA63B5E5374B8FAF71C39C2CB3BCF0E /* ExpandedCellViewModel.swift in Sources */,
-				A84E3E02063E8273D48BF5885D37F331 /* Extensions.swift in Sources */,
-				262D6D93AB511C3A02E91BC4EA35C1F9 /* UIExpandableCVCellKit-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4735D4E3ABA05BD6236D63AA83DE3803 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				90BB081799B9FBFB1AAE6A8476B1862F /* Pods-AppStoreAnimationDemoUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56190575D5B72DB7A141F78207F9BF5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				976B77C2AE8BDACA490A9B5CB7ED7083 /* ExpandableCellViewModel.swift in Sources */,
+				AE1E6DB2888CA14E15382C55856CC9B1 /* ExpandableCVCellProtocol.swift in Sources */,
+				BE67195FBC1ACF0E41279D171BC36D33 /* ExpandableCVProtocol.swift in Sources */,
+				13439A0743CEC607B3373842A9902D3F /* Extensions.swift in Sources */,
+				1461F33155DB0E2EEA50C33E273F8B8F /* UIExpandableCVCellKit-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -818,7 +818,7 @@
 		};
 		777DF2E076894D834252F59A3DBD3458 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 894669991A5A282EAD8BA9BDC8CA095B /* UIExpandableCVCellKit.xcconfig */;
+			baseConfigurationReference = A4B9609E981DC03E8FF57623593520D7 /* UIExpandableCVCellKit.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -855,7 +855,7 @@
 		};
 		D691794252F9A4AFFEC4918DE4059143 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 894669991A5A282EAD8BA9BDC8CA095B /* UIExpandableCVCellKit.xcconfig */;
+			baseConfigurationReference = A4B9609E981DC03E8FF57623593520D7 /* UIExpandableCVCellKit.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
