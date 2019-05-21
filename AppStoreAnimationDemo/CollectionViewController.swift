@@ -71,11 +71,7 @@ class CollectionViewController: UICollectionViewController,  ExpandableCVProtoco
 
 	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
-		guard let currentCell = collectionView.cellForItem(at: indexPath) as? ExpandableCollectionViewCell else { return }
-
-		if !isCellOpened {
-			currentCell.animateCellOpen()
-		}
+		animateCellOpen(indexPath: indexPath)
 	}
 	
 	override var prefersStatusBarHidden: Bool {
