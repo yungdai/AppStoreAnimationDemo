@@ -62,9 +62,11 @@ class CollectionViewController: UICollectionViewController,  ExpandableCVProtoco
 											  openedCenter: collectionView.center,
 											  springDamping: springDamping,
 											  springVelocity: springVelocity,
-											  animationDuration: animationDuration, expandedCellCollectionProtocol: self)
+											  animationDuration: animationDuration,
+											  dragThreshold: 0.15,
+											  expandedCellCollectionProtocol: self)
 
-		cell.configure(with: cellModel)
+		try? cell.configure(with: cellModel)
 
         return cell
     }

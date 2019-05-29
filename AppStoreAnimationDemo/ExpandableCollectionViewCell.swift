@@ -9,7 +9,7 @@ import UIKit
 import UIExpandableCVCellKit
 
 class ExpandableCollectionViewCell: UICollectionViewCell, ExpandableCVCellProtocol {
-
+	
 	@IBOutlet var headerHeightConstraint: NSLayoutConstraint!
 	
 	@IBOutlet weak var bodyContainerWidthConstraint: NSLayoutConstraint!
@@ -21,26 +21,9 @@ class ExpandableCollectionViewCell: UICollectionViewCell, ExpandableCVCellProtoc
 	@IBOutlet weak var bodyText: UILabel!
 	@IBOutlet weak var findOutMoreLabel: UILabel!
 
-	internal var originalBounds: CGRect = CGRect.zero
-	internal var originalCenter: CGPoint = CGPoint.zero
-	
-	internal var openedBounds: CGRect = CGRect.zero
-	internal var openedCenter: CGPoint = CGPoint.zero
-	
-	internal var springDamping: CGFloat = 0.0
-	internal var springVelocity: CGFloat = 0.0
-	
-	internal var animationDuration: TimeInterval = 0.0
-	
 	internal var expandableCVProtocol: ExpandableCVProtocol?
-	
-	internal var scrollDirection: UICollectionView.ScrollDirection = .vertical
-
-	// threshold expressed in percentage of when the snapping should occure
-	internal var dragThreshold: CGFloat = 0.15
+	internal var viewModel: ExpandableCellViewModel?
 	internal var panGesture = UIPanGestureRecognizer()
-	
-	internal var expandedCellCollectionProtocol: ExpandableCVProtocol?
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
