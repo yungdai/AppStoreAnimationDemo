@@ -8,7 +8,7 @@
 import UIKit
 import UIExpandableCVCellKit
 
-class ExpandableCollectionViewCell: UICollectionViewCell, ExpandableCVCellProtocol {
+final class ExpandableCollectionViewCell: UICollectionViewCell, ExpandableCVCellProtocol {
 	
 	@IBOutlet var headerHeightConstraint: NSLayoutConstraint!
 	

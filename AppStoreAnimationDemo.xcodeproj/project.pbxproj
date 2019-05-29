@@ -162,7 +162,6 @@
 				9FEB90642279D94C008BF116 /* Info.plist */,
 				9FEB908E227C8D15008BF116 /* ExpandableCollectionViewCell.swift */,
 				9FEB90862279E3E6008BF116 /* CollectionViewController.swift */,
-				9FEB909D228323B8008BF116 /* ExpandedCellInteraction */,
 			);
 			path = AppStoreAnimationDemo;
 			sourceTree = "<group>";
@@ -183,13 +182,6 @@
 				9FEB907A2279D94C008BF116 /* Info.plist */,
 			);
 			path = AppStoreAnimationDemoUITests;
-			sourceTree = "<group>";
-		};
-		9FEB909D228323B8008BF116 /* ExpandedCellInteraction */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ExpandedCellInteraction;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

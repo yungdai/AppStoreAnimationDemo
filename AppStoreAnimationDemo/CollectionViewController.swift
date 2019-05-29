@@ -10,7 +10,7 @@ import UIExpandableCVCellKit
 
 private let reuseIdentifier = "Cell"
 
-class CollectionViewController: UICollectionViewController,  ExpandableCVProtocol {
+final class CollectionViewController: UICollectionViewController,  ExpandableCVProtocol {
 
 	var collectionVC: UICollectionView?
 
