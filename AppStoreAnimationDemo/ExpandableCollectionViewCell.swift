@@ -14,7 +14,7 @@ final class ExpandableCollectionViewCell: UICollectionViewCell, ExpandableCVCell
 	
 	@IBOutlet weak var bodyContainerWidthConstraint: NSLayoutConstraint!
 	@IBOutlet weak var headerView: UIView!
-	@IBOutlet weak var containterView: UIView!
+	@IBOutlet weak var containerView: UIView!
 	@IBOutlet weak var contentContainerView: UIView!
 	@IBOutlet weak var titleFont: UILabel!
 	@IBOutlet weak var closeButton: UIButton!
@@ -24,6 +24,8 @@ final class ExpandableCollectionViewCell: UICollectionViewCell, ExpandableCVCell
 	internal var expandableCVProtocol: ExpandableCVProtocol?
 	internal var viewModel: ExpandableCellViewModel?
 	internal var panGesture = UIPanGestureRecognizer()
+	
+	private let cornerRadius: CGFloat = 15
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -48,24 +50,32 @@ final class ExpandableCollectionViewCell: UICollectionViewCell, ExpandableCVCell
 		bodyText.alpha = 0
 		closeButton.alpha = 0
 		closeButton.isHidden = true
-		containterView.layer.cornerRadius = 15
-		containterView.layer.shadowColor = UIColor.black.cgColor
-		containterView.layer.shadowRadius = 4
-		containterView.layer.shadowOpacity = 0.3
+		
+		containerView.layer.cornerRadius = 15
+		containerView.layer.shadowColor = UIColor.black.cgColor
+		containerView.layer.shadowRadius = 4
+		containerView.layer.shadowOpacity = 0.3
+		containerView.layer.shadowOffset = CGSize(width: 0, height: 0)
 
 		closeButton.layer.backgroundColor = UIColor.lightGray.cgColor
 		closeButton.layer.cornerRadius = closeButton.bounds.width / 2
-		
-		contentContainerView.layer.cornerRadius = 15
-		
+
 		let margin: CGFloat = 20.0
 		
-		let textContainerWidth = self.containterView.bounds.width - (margin * 2)
+		contentContainerView.layer.cornerRadius = cornerRadius
+		
+		headerView.layer.cornerRadius = cornerRadius
+		headerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+
+		let textContainerWidth = self.containerView.bounds.width - (margin * 2)
 		
 		bodyContainerWidthConstraint.constant = textContainerWidth
 		
+		bodyText.setNeedsUpdateConstraints()
+		
 		contentContainerView.layoutIfNeeded()
 	}
+	
 
 	private func setupGesture() {
 
@@ -89,6 +99,9 @@ final class ExpandableCollectionViewCell: UICollectionViewCell, ExpandableCVCell
 			self.headerHeightConstraint.constant = self.headerHeightConstraint.constant * 2
 			
 			self.findOutMoreLabel.animateText(text: "New ways to open cells!", duration: 0.1)
+			
+			self.headerView.layer.cornerRadius = 0
+			self.containerView.layer.cornerRadius = 0
 		}
 
 		return (handler: animations, completion: nil, isAnimated: true)
@@ -119,6 +132,9 @@ final class ExpandableCollectionViewCell: UICollectionViewCell, ExpandableCVCell
 			self.headerHeightConstraint.constant = self.headerHeightConstraint.constant / 2
 			
 			self.findOutMoreLabel.animateText(text: "Find out more:", duration: 0.1)
+			
+			self.headerView.layer.cornerRadius = self.cornerRadius
+			self.containerView.layer.cornerRadius = self.cornerRadius
 		}
 		
 		return (handler: animations, completion: nil, isAnimated: true)

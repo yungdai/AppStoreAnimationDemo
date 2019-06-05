@@ -7,23 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13439A0743CEC607B3373842A9902D3F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A1FB4F7B89659856FC00A39DEB362 /* Extensions.swift */; };
-		1461F33155DB0E2EEA50C33E273F8B8F /* UIExpandableCVCellKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D94EB8A3B8D1D5303B60A334FFC53230 /* UIExpandableCVCellKit-dummy.m */; };
-		1F0C13C1D92A990F5A99D7769B9E2865 /* UIExpandableCVCellKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 70173498C254553C2C245169B0B3FB65 /* UIExpandableCVCellKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01B4DFCB1BEAE358142710BC1DD51162 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		2C46F4D267E532B25AC480215D38156F /* UIExpandableCVCellKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 73737E8D897646505DC558FCD0307891 /* UIExpandableCVCellKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3C25AFDB1A3BE714AB9017FE02878AF0 /* Pods-AppStoreAnimationDemoTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F2B86EEBF109279EF9F72CA9741332 /* Pods-AppStoreAnimationDemoTests-dummy.m */; };
+		5351FB12DDC52967DC27017732020BE2 /* UIExpandableCVCellKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1A2DF4B56D45A04EB761ACD0A85E240 /* UIExpandableCVCellKit-dummy.m */; };
 		625DBEA1968B48544569652470DEE7D8 /* Pods-AppStoreAnimationDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5147B6E2B5BDE839CB97F347AD1C518F /* Pods-AppStoreAnimationDemo-dummy.m */; };
+		62DC700DD97435E4D1035A428E5858E2 /* UIExpandableCVCellKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 82BB258BC328DB7086AF97ED9515E4BB /* UIExpandableCVCellKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		770D1B722BD11A7C4F2908C46522D9B7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715A19200F60D0FE58E1B2B3AC7F4D16 /* Extensions.swift */; };
 		77C3726AD64B82FED525A75934D8E28E /* Pods-AppStoreAnimationDemoUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E4A7E028834DFADD47850F20C252269 /* Pods-AppStoreAnimationDemoUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EAACCB4DDC7F78AF0BB429606634566 /* ExpandableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E05385F925B1543A504DEF57FA2044D4 /* ExpandableCellViewModel.swift */; };
 		85403A2A64C0B0F53D8952B495A624F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		90BB081799B9FBFB1AAE6A8476B1862F /* Pods-AppStoreAnimationDemoUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C3D3B840F5DE22BD54EABA20E240DB92 /* Pods-AppStoreAnimationDemoUITests-dummy.m */; };
 		9615162D5AC0B45F174E7BF3240DFE49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		976B77C2AE8BDACA490A9B5CB7ED7083 /* ExpandableCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9A7CD4094A73A34E741BBDB00DB1BE /* ExpandableCellViewModel.swift */; };
+		A481C56A2ECED466B8A6EC415E197213 /* ExpandableCVCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77611E65CD63566F6CF0CEBDE8CC06F8 /* ExpandableCVCellProtocol.swift */; };
 		AA892E0FA56422DF32A11669192EE587 /* Pods-AppStoreAnimationDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE450E31E3567A07AE47A4FAECF5CE57 /* Pods-AppStoreAnimationDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AE1E6DB2888CA14E15382C55856CC9B1 /* ExpandableCVCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42F51192451D72AF3656D772454344B /* ExpandableCVCellProtocol.swift */; };
-		B3335F908B137C5FB670E465ABE5E4C0 /* UIExpandableCVCellKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F2FBE8CABFA4882AB2B61CF5C199C85A /* UIExpandableCVCellKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BE1F9738C8E86CA980504E55F4131E59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		BE67195FBC1ACF0E41279D171BC36D33 /* ExpandableCVProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC1173EE5BA54BDE5767BF0630B483 /* ExpandableCVProtocol.swift */; };
+		C365DC5BB2C901DDD3200923F2EE5D6A /* ExpandableCVCKitErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E844109E6CCD9ACE8BFB9127FE647 /* ExpandableCVCKitErrors.swift */; };
 		D0237AA1C1BF28A8B5BC17A47FAF2C4F /* Pods-AppStoreAnimationDemoTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F732623D7DAF316FDDAB47F0616A21B0 /* Pods-AppStoreAnimationDemoTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DF6E5F575EA5793096DB43BCA179EF66 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		EF93CC105D5399E99D295D41B265A6AC /* ExpandableCVProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6934744533F70A6AFE0212C280F71FFD /* ExpandableCVProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,47 +52,50 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B9A7CD4094A73A34E741BBDB00DB1BE /* ExpandableCellViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableCellViewModel.swift; path = UIExpandableCVCellKit/ExpandableCellViewModel.swift; sourceTree = "<group>"; };
-		0FEAA41D733E977D9FAC00F80C76D936 /* UIExpandableCVCellKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UIExpandableCVCellKit-Info.plist"; sourceTree = "<group>"; };
-		11CC1173EE5BA54BDE5767BF0630B483 /* ExpandableCVProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableCVProtocol.swift; path = UIExpandableCVCellKit/ExpandableCVProtocol.swift; sourceTree = "<group>"; };
+		0209843CBF235A20B777A641BC9D87DA /* UIExpandableCVCellKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UIExpandableCVCellKit.xcconfig; sourceTree = "<group>"; };
+		1E5218B9D9DBE329DC637BA1E2E3EBF2 /* UIExpandableCVCellKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = UIExpandableCVCellKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		1E7EF759537BC17A8EF8C05D3C5964B5 /* Pods-AppStoreAnimationDemo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppStoreAnimationDemo-Info.plist"; sourceTree = "<group>"; };
-		2247E0BC6AE5BF92BAA87A3548A1333E /* UIExpandableCVCellKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIExpandableCVCellKit-prefix.pch"; sourceTree = "<group>"; };
 		26C1E60BED80C21C7E235E5354EB2318 /* Pods-AppStoreAnimationDemoTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AppStoreAnimationDemoTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		286B537496B54DF77320523C66E99102 /* Pods-AppStoreAnimationDemoTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppStoreAnimationDemoTests-Info.plist"; sourceTree = "<group>"; };
+		2A8F92E03D55D1E0EAAB4D7D8541CBD3 /* Pods_AppStoreAnimationDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AppStoreAnimationDemoTests.framework; path = "Pods-AppStoreAnimationDemoTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3247D7FFB7332E9DCF2D5FF1D644EDE2 /* Pods_AppStoreAnimationDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AppStoreAnimationDemo.framework; path = "Pods-AppStoreAnimationDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		339E8E8E9337680F63C116F3DA09AD14 /* Pods-AppStoreAnimationDemoUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppStoreAnimationDemoUITests-acknowledgements.plist"; sourceTree = "<group>"; };
 		37F2B86EEBF109279EF9F72CA9741332 /* Pods-AppStoreAnimationDemoTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AppStoreAnimationDemoTests-dummy.m"; sourceTree = "<group>"; };
 		3E6459F89CC979169AE00584C0C1C49C /* Pods-AppStoreAnimationDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppStoreAnimationDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
-		425A1FB4F7B89659856FC00A39DEB362 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = UIExpandableCVCellKit/Extensions.swift; sourceTree = "<group>"; };
-		4BC7C5D1FD4497EC9E2741265A0C48F2 /* UIExpandableCVCellKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UIExpandableCVCellKit.modulemap; sourceTree = "<group>"; };
 		4D8C9ADF582B138ED2DE8F7F9254844E /* Pods-AppStoreAnimationDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppStoreAnimationDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		508FF751FBC2A6F1B1B90D624376E96A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		5147B6E2B5BDE839CB97F347AD1C518F /* Pods-AppStoreAnimationDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AppStoreAnimationDemo-dummy.m"; sourceTree = "<group>"; };
 		57A57300A7DCCF42E544CEEF596B6E30 /* Pods-AppStoreAnimationDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppStoreAnimationDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		5C13782CEA5153710F24BCF566F2D14A /* UIExpandableCVCellKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIExpandableCVCellKit-prefix.pch"; sourceTree = "<group>"; };
 		604E123BB01966A40042791FC2C6295B /* Pods-AppStoreAnimationDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppStoreAnimationDemo.release.xcconfig"; sourceTree = "<group>"; };
 		6334BB784DC9A6EFBB59B3A5D7FBE2CB /* Pods-AppStoreAnimationDemoTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AppStoreAnimationDemoTests.modulemap"; sourceTree = "<group>"; };
+		6934744533F70A6AFE0212C280F71FFD /* ExpandableCVProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableCVProtocol.swift; path = UIExpandableCVCellKit/ExpandableCVProtocol.swift; sourceTree = "<group>"; };
 		6F0B5D90576C2A40363A9D59F80E6FF2 /* Pods-AppStoreAnimationDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AppStoreAnimationDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		70173498C254553C2C245169B0B3FB65 /* UIExpandableCVCellKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UIExpandableCVCellKit.h; path = UIExpandableCVCellKit/UIExpandableCVCellKit.h; sourceTree = "<group>"; };
+		715A19200F60D0FE58E1B2B3AC7F4D16 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = UIExpandableCVCellKit/Extensions.swift; sourceTree = "<group>"; };
+		73737E8D897646505DC558FCD0307891 /* UIExpandableCVCellKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIExpandableCVCellKit-umbrella.h"; sourceTree = "<group>"; };
+		77611E65CD63566F6CF0CEBDE8CC06F8 /* ExpandableCVCellProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableCVCellProtocol.swift; path = UIExpandableCVCellKit/ExpandableCVCellProtocol.swift; sourceTree = "<group>"; };
+		779602BDAA7B8009F3FFBB3D554A6144 /* Pods_AppStoreAnimationDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AppStoreAnimationDemoUITests.framework; path = "Pods-AppStoreAnimationDemoUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		77CF350C137AEDD62EDFAC1AD1A485F7 /* UIExpandableCVCellKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UIExpandableCVCellKit.modulemap; sourceTree = "<group>"; };
 		7C485A3ECE0E84AB1BD3D46C08CB8A3D /* Pods-AppStoreAnimationDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AppStoreAnimationDemo.modulemap"; sourceTree = "<group>"; };
+		82BB258BC328DB7086AF97ED9515E4BB /* UIExpandableCVCellKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = UIExpandableCVCellKit.h; path = UIExpandableCVCellKit/UIExpandableCVCellKit.h; sourceTree = "<group>"; };
 		87A2E483AA4DFF55121D31AD92DF22F5 /* Pods-AppStoreAnimationDemoUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AppStoreAnimationDemoUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8D0E844109E6CCD9ACE8BFB9127FE647 /* ExpandableCVCKitErrors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableCVCKitErrors.swift; path = UIExpandableCVCellKit/ExpandableCVCKitErrors.swift; sourceTree = "<group>"; };
 		8E4A7E028834DFADD47850F20C252269 /* Pods-AppStoreAnimationDemoUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AppStoreAnimationDemoUITests-umbrella.h"; sourceTree = "<group>"; };
 		8FB2E5095958BC25508E798E5B90070F /* Pods-AppStoreAnimationDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppStoreAnimationDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		9A6B1D60BC58454FF02339465B724F7D /* Pods-AppStoreAnimationDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppStoreAnimationDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		9B858467A41D4DEA113D0A421AD68F60 /* UIExpandableCVCellKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UIExpandableCVCellKit.framework; path = UIExpandableCVCellKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A4B9609E981DC03E8FF57623593520D7 /* UIExpandableCVCellKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UIExpandableCVCellKit.xcconfig; sourceTree = "<group>"; };
-		AB5C631D2E31E24BB73443FA1743F39C /* Pods_AppStoreAnimationDemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AppStoreAnimationDemoUITests.framework; path = "Pods-AppStoreAnimationDemoUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD46E8EDC2D8B4240ECB05D5F5899F9D /* Pods-AppStoreAnimationDemoUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AppStoreAnimationDemoUITests.modulemap"; sourceTree = "<group>"; };
-		B2F79966F0CDD6E94E701387305B6896 /* Pods_AppStoreAnimationDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AppStoreAnimationDemo.framework; path = "Pods-AppStoreAnimationDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE3277927F94210B6E7C369A1FD4024A /* Pods-AppStoreAnimationDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AppStoreAnimationDemo-frameworks.sh"; sourceTree = "<group>"; };
 		C373EE985D95286B6996312393805A53 /* Pods-AppStoreAnimationDemoUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppStoreAnimationDemoUITests-Info.plist"; sourceTree = "<group>"; };
 		C3D3B840F5DE22BD54EABA20E240DB92 /* Pods-AppStoreAnimationDemoUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AppStoreAnimationDemoUITests-dummy.m"; sourceTree = "<group>"; };
 		C7317549784D21311960098FDDF41514 /* Pods-AppStoreAnimationDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppStoreAnimationDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
-		D71207FB46B549C78FB88B55B5C2CDCD /* Pods_AppStoreAnimationDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AppStoreAnimationDemoTests.framework; path = "Pods-AppStoreAnimationDemoTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1A2DF4B56D45A04EB761ACD0A85E240 /* UIExpandableCVCellKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIExpandableCVCellKit-dummy.m"; sourceTree = "<group>"; };
 		D91821F10D3A8ECA3CA3786A87C0FD1D /* Pods-AppStoreAnimationDemoTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppStoreAnimationDemoTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		D94EB8A3B8D1D5303B60A334FFC53230 /* UIExpandableCVCellKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIExpandableCVCellKit-dummy.m"; sourceTree = "<group>"; };
-		E42F51192451D72AF3656D772454344B /* ExpandableCVCellProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableCVCellProtocol.swift; path = UIExpandableCVCellKit/ExpandableCVCellProtocol.swift; sourceTree = "<group>"; };
+		E05385F925B1543A504DEF57FA2044D4 /* ExpandableCellViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpandableCellViewModel.swift; path = UIExpandableCVCellKit/ExpandableCellViewModel.swift; sourceTree = "<group>"; };
+		E138C7A6423457F5640B1A19B3F1C6F0 /* UIExpandableCVCellKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UIExpandableCVCellKit-Info.plist"; sourceTree = "<group>"; };
 		EE450E31E3567A07AE47A4FAECF5CE57 /* Pods-AppStoreAnimationDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AppStoreAnimationDemo-umbrella.h"; sourceTree = "<group>"; };
-		F2FBE8CABFA4882AB2B61CF5C199C85A /* UIExpandableCVCellKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIExpandableCVCellKit-umbrella.h"; sourceTree = "<group>"; };
+		F1B0EA9857FB4A37BF5D7B00B644E185 /* UIExpandableCVCellKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UIExpandableCVCellKit.framework; path = UIExpandableCVCellKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F732623D7DAF316FDDAB47F0616A21B0 /* Pods-AppStoreAnimationDemoTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AppStoreAnimationDemoTests-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,6 +105,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9615162D5AC0B45F174E7BF3240DFE49 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61EBF16D40F4B9A6F1E8C9E27634A473 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01B4DFCB1BEAE358142710BC1DD51162 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,23 +132,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F745093DFD073F33360021DCCC37CD0C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DF6E5F575EA5793096DB43BCA179EF66 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1C8E5354D2936F657D4802F2916EA856 /* Pods */ = {
+		1E2C57DEE0EF17344FE03F23712D5670 /* UIExpandableCVCellKit */ = {
 			isa = PBXGroup;
 			children = (
-				5B52C4A2223A1FF602FA9AB39D5A6CC1 /* UIExpandableCVCellKit */,
+				E05385F925B1543A504DEF57FA2044D4 /* ExpandableCellViewModel.swift */,
+				77611E65CD63566F6CF0CEBDE8CC06F8 /* ExpandableCVCellProtocol.swift */,
+				8D0E844109E6CCD9ACE8BFB9127FE647 /* ExpandableCVCKitErrors.swift */,
+				6934744533F70A6AFE0212C280F71FFD /* ExpandableCVProtocol.swift */,
+				715A19200F60D0FE58E1B2B3AC7F4D16 /* Extensions.swift */,
+				82BB258BC328DB7086AF97ED9515E4BB /* UIExpandableCVCellKit.h */,
+				D6C58EC3397FF74A749F916A6BD5148C /* Pod */,
+				211130AD227C0063BECD477B016D6434 /* Support Files */,
 			);
-			name = Pods;
+			name = UIExpandableCVCellKit;
+			path = "/Users/yungdai/Documents/Working Code/UIExpandableCVCellKit";
+			sourceTree = "<absolute>";
+		};
+		1FB6A26E2F56745DD7746E96137CE300 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E2C57DEE0EF17344FE03F23712D5670 /* UIExpandableCVCellKit */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		211130AD227C0063BECD477B016D6434 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				77CF350C137AEDD62EDFAC1AD1A485F7 /* UIExpandableCVCellKit.modulemap */,
+				0209843CBF235A20B777A641BC9D87DA /* UIExpandableCVCellKit.xcconfig */,
+				D1A2DF4B56D45A04EB761ACD0A85E240 /* UIExpandableCVCellKit-dummy.m */,
+				E138C7A6423457F5640B1A19B3F1C6F0 /* UIExpandableCVCellKit-Info.plist */,
+				5C13782CEA5153710F24BCF566F2D14A /* UIExpandableCVCellKit-prefix.pch */,
+				73737E8D897646505DC558FCD0307891 /* UIExpandableCVCellKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../AppStoreAnimationDemo/Pods/Target Support Files/UIExpandableCVCellKit";
 			sourceTree = "<group>";
 		};
 		36E63DFE1E912B201F3D288295702D93 /* Targets Support Files */ = {
@@ -147,34 +181,6 @@
 				ACF463942F13E27851B6A90379BFC5D6 /* Pods-AppStoreAnimationDemoUITests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		39FC88E5C80F0BEA0AFEA5AF083B8944 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				4BC7C5D1FD4497EC9E2741265A0C48F2 /* UIExpandableCVCellKit.modulemap */,
-				A4B9609E981DC03E8FF57623593520D7 /* UIExpandableCVCellKit.xcconfig */,
-				D94EB8A3B8D1D5303B60A334FFC53230 /* UIExpandableCVCellKit-dummy.m */,
-				0FEAA41D733E977D9FAC00F80C76D936 /* UIExpandableCVCellKit-Info.plist */,
-				2247E0BC6AE5BF92BAA87A3548A1333E /* UIExpandableCVCellKit-prefix.pch */,
-				F2FBE8CABFA4882AB2B61CF5C199C85A /* UIExpandableCVCellKit-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/UIExpandableCVCellKit";
-			sourceTree = "<group>";
-		};
-		5B52C4A2223A1FF602FA9AB39D5A6CC1 /* UIExpandableCVCellKit */ = {
-			isa = PBXGroup;
-			children = (
-				0B9A7CD4094A73A34E741BBDB00DB1BE /* ExpandableCellViewModel.swift */,
-				E42F51192451D72AF3656D772454344B /* ExpandableCVCellProtocol.swift */,
-				11CC1173EE5BA54BDE5767BF0630B483 /* ExpandableCVProtocol.swift */,
-				425A1FB4F7B89659856FC00A39DEB362 /* Extensions.swift */,
-				70173498C254553C2C245169B0B3FB65 /* UIExpandableCVCellKit.h */,
-				39FC88E5C80F0BEA0AFEA5AF083B8944 /* Support Files */,
-			);
-			name = UIExpandableCVCellKit;
-			path = UIExpandableCVCellKit;
 			sourceTree = "<group>";
 		};
 		85614BFC70ABAB92521C4839152C327E /* Pods-AppStoreAnimationDemo */ = {
@@ -238,8 +244,8 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				1FB6A26E2F56745DD7746E96137CE300 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				1C8E5354D2936F657D4802F2916EA856 /* Pods */,
 				ED33CA48EB1CF4FCEC7C155E7B430323 /* Products */,
 				36E63DFE1E912B201F3D288295702D93 /* Targets Support Files */,
 			);
@@ -253,13 +259,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D6C58EC3397FF74A749F916A6BD5148C /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				508FF751FBC2A6F1B1B90D624376E96A /* README.md */,
+				1E5218B9D9DBE329DC637BA1E2E3EBF2 /* UIExpandableCVCellKit.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
 		ED33CA48EB1CF4FCEC7C155E7B430323 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B2F79966F0CDD6E94E701387305B6896 /* Pods_AppStoreAnimationDemo.framework */,
-				D71207FB46B549C78FB88B55B5C2CDCD /* Pods_AppStoreAnimationDemoTests.framework */,
-				AB5C631D2E31E24BB73443FA1743F39C /* Pods_AppStoreAnimationDemoUITests.framework */,
-				9B858467A41D4DEA113D0A421AD68F60 /* UIExpandableCVCellKit.framework */,
+				3247D7FFB7332E9DCF2D5FF1D644EDE2 /* Pods_AppStoreAnimationDemo.framework */,
+				2A8F92E03D55D1E0EAAB4D7D8541CBD3 /* Pods_AppStoreAnimationDemoTests.framework */,
+				779602BDAA7B8009F3FFBB3D554A6144 /* Pods_AppStoreAnimationDemoUITests.framework */,
+				F1B0EA9857FB4A37BF5D7B00B644E185 /* UIExpandableCVCellKit.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -267,6 +282,15 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		814530C5D2C52613394E7471605C3140 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C46F4D267E532B25AC480215D38156F /* UIExpandableCVCellKit-umbrella.h in Headers */,
+				62DC700DD97435E4D1035A428E5858E2 /* UIExpandableCVCellKit.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		963F01AF0F8B1315B12478D1217A0273 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -291,15 +315,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D16EFD96D1D03A9BA8FF263DDA980F41 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B3335F908B137C5FB670E465ABE5E4C0 /* UIExpandableCVCellKit-umbrella.h in Headers */,
-				1F0C13C1D92A990F5A99D7769B9E2865 /* UIExpandableCVCellKit.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -319,7 +334,7 @@
 			);
 			name = "Pods-AppStoreAnimationDemoUITests";
 			productName = "Pods-AppStoreAnimationDemoUITests";
-			productReference = AB5C631D2E31E24BB73443FA1743F39C /* Pods_AppStoreAnimationDemoUITests.framework */;
+			productReference = 779602BDAA7B8009F3FFBB3D554A6144 /* Pods_AppStoreAnimationDemoUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		99F22CDE8F84F9CD73DA7C101AA53E7F /* Pods-AppStoreAnimationDemo */ = {
@@ -338,17 +353,17 @@
 			);
 			name = "Pods-AppStoreAnimationDemo";
 			productName = "Pods-AppStoreAnimationDemo";
-			productReference = B2F79966F0CDD6E94E701387305B6896 /* Pods_AppStoreAnimationDemo.framework */;
+			productReference = 3247D7FFB7332E9DCF2D5FF1D644EDE2 /* Pods_AppStoreAnimationDemo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B1254AC7B30ABE0997877A1EBE9A77C3 /* UIExpandableCVCellKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 60F8ADD3E5F5D8958EF24E1B514DA7CB /* Build configuration list for PBXNativeTarget "UIExpandableCVCellKit" */;
+			buildConfigurationList = 6DDFB733F6D66FD115FA355E61EC7841 /* Build configuration list for PBXNativeTarget "UIExpandableCVCellKit" */;
 			buildPhases = (
-				D16EFD96D1D03A9BA8FF263DDA980F41 /* Headers */,
-				56190575D5B72DB7A141F78207F9BF5A /* Sources */,
-				F745093DFD073F33360021DCCC37CD0C /* Frameworks */,
-				E146DD34B1E9154E377AFD83A167A4EA /* Resources */,
+				814530C5D2C52613394E7471605C3140 /* Headers */,
+				C889EF8D146EBC637BE69E864147AF07 /* Sources */,
+				61EBF16D40F4B9A6F1E8C9E27634A473 /* Frameworks */,
+				A13C02D93F9008D95CE1B933EC755733 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -356,7 +371,7 @@
 			);
 			name = UIExpandableCVCellKit;
 			productName = UIExpandableCVCellKit;
-			productReference = 9B858467A41D4DEA113D0A421AD68F60 /* UIExpandableCVCellKit.framework */;
+			productReference = F1B0EA9857FB4A37BF5D7B00B644E185 /* UIExpandableCVCellKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		DD41BE749D917AE124C809EE866D1DB7 /* Pods-AppStoreAnimationDemoTests */ = {
@@ -375,7 +390,7 @@
 			);
 			name = "Pods-AppStoreAnimationDemoTests";
 			productName = "Pods-AppStoreAnimationDemoTests";
-			productReference = D71207FB46B549C78FB88B55B5C2CDCD /* Pods_AppStoreAnimationDemoTests.framework */;
+			productReference = 2A8F92E03D55D1E0EAAB4D7D8541CBD3 /* Pods_AppStoreAnimationDemoTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -415,14 +430,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C5A5DCBE2C5A53A2C886B7C8F9DBACDE /* Resources */ = {
+		A13C02D93F9008D95CE1B933EC755733 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E146DD34B1E9154E377AFD83A167A4EA /* Resources */ = {
+		C5A5DCBE2C5A53A2C886B7C8F9DBACDE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -447,18 +462,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		56190575D5B72DB7A141F78207F9BF5A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				976B77C2AE8BDACA490A9B5CB7ED7083 /* ExpandableCellViewModel.swift in Sources */,
-				AE1E6DB2888CA14E15382C55856CC9B1 /* ExpandableCVCellProtocol.swift in Sources */,
-				BE67195FBC1ACF0E41279D171BC36D33 /* ExpandableCVProtocol.swift in Sources */,
-				13439A0743CEC607B3373842A9902D3F /* Extensions.swift in Sources */,
-				1461F33155DB0E2EEA50C33E273F8B8F /* UIExpandableCVCellKit-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		7A556442AE993EC1AA7971DF11C718B4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -472,6 +475,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				625DBEA1968B48544569652470DEE7D8 /* Pods-AppStoreAnimationDemo-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C889EF8D146EBC637BE69E864147AF07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EAACCB4DDC7F78AF0BB429606634566 /* ExpandableCellViewModel.swift in Sources */,
+				A481C56A2ECED466B8A6EC415E197213 /* ExpandableCVCellProtocol.swift in Sources */,
+				C365DC5BB2C901DDD3200923F2EE5D6A /* ExpandableCVCKitErrors.swift in Sources */,
+				EF93CC105D5399E99D295D41B265A6AC /* ExpandableCVProtocol.swift in Sources */,
+				770D1B722BD11A7C4F2908C46522D9B7 /* Extensions.swift in Sources */,
+				5351FB12DDC52967DC27017732020BE2 /* UIExpandableCVCellKit-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,6 +515,42 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		123ED434AC1BC824F5FAD584CF4E69F0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0209843CBF235A20B777A641BC9D87DA /* UIExpandableCVCellKit.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UIExpandableCVCellKit/UIExpandableCVCellKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIExpandableCVCellKit/UIExpandableCVCellKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/UIExpandableCVCellKit/UIExpandableCVCellKit.modulemap";
+				PRODUCT_MODULE_NAME = UIExpandableCVCellKit;
+				PRODUCT_NAME = UIExpandableCVCellKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		204B8AEA4AE90A551A1768B355C2F9F0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -679,6 +731,43 @@
 			};
 			name = Release;
 		};
+		37A344C9D693B97F72EDF2563504CCCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0209843CBF235A20B777A641BC9D87DA /* UIExpandableCVCellKit.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UIExpandableCVCellKit/UIExpandableCVCellKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIExpandableCVCellKit/UIExpandableCVCellKit-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/UIExpandableCVCellKit/UIExpandableCVCellKit.modulemap";
+				PRODUCT_MODULE_NAME = UIExpandableCVCellKit;
+				PRODUCT_NAME = UIExpandableCVCellKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		3CCC6195EDBEE5DA2A49DF962113BE16 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -816,79 +905,6 @@
 			};
 			name = Release;
 		};
-		777DF2E076894D834252F59A3DBD3458 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4B9609E981DC03E8FF57623593520D7 /* UIExpandableCVCellKit.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/UIExpandableCVCellKit/UIExpandableCVCellKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/UIExpandableCVCellKit/UIExpandableCVCellKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/UIExpandableCVCellKit/UIExpandableCVCellKit.modulemap";
-				PRODUCT_MODULE_NAME = UIExpandableCVCellKit;
-				PRODUCT_NAME = UIExpandableCVCellKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D691794252F9A4AFFEC4918DE4059143 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4B9609E981DC03E8FF57623593520D7 /* UIExpandableCVCellKit.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/UIExpandableCVCellKit/UIExpandableCVCellKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/UIExpandableCVCellKit/UIExpandableCVCellKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/UIExpandableCVCellKit/UIExpandableCVCellKit.modulemap";
-				PRODUCT_MODULE_NAME = UIExpandableCVCellKit;
-				PRODUCT_NAME = UIExpandableCVCellKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		D6E0E629DAE013D3037051C2FD5FF8C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3E6459F89CC979169AE00584C0C1C49C /* Pods-AppStoreAnimationDemoTests.debug.xcconfig */;
@@ -957,11 +973,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		60F8ADD3E5F5D8958EF24E1B514DA7CB /* Build configuration list for PBXNativeTarget "UIExpandableCVCellKit" */ = {
+		6DDFB733F6D66FD115FA355E61EC7841 /* Build configuration list for PBXNativeTarget "UIExpandableCVCellKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D691794252F9A4AFFEC4918DE4059143 /* Debug */,
-				777DF2E076894D834252F59A3DBD3458 /* Release */,
+				123ED434AC1BC824F5FAD584CF4E69F0 /* Debug */,
+				37A344C9D693B97F72EDF2563504CCCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

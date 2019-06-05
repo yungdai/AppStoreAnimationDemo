@@ -10,7 +10,7 @@ import UIExpandableCVCellKit
 
 private let reuseIdentifier = "Cell"
 
-final class CollectionViewController: UICollectionViewController,  ExpandableCVProtocol {
+final class CollectionViewController: UICollectionViewController, ExpandableCVProtocol {
 
 	var collectionVC: UICollectionView?
 
@@ -55,18 +55,8 @@ final class CollectionViewController: UICollectionViewController,  ExpandableCVP
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? ExpandableCVCellProtocol else {
 			return UICollectionViewCell() }
-		
-		let cellModel = ExpandableCellViewModel(originalBounds: cell.bounds,
-											  originalCenter: cell.center,
-											  openedBounds: collectionView.bounds,
-											  openedCenter: collectionView.center,
-											  springDamping: springDamping,
-											  springVelocity: springVelocity,
-											  animationDuration: animationDuration,
-											  dragThreshold: 0.15,
-											  expandedCellCollectionProtocol: self)
 
-		try? cell.configure(with: cellModel)
+		try? cell.configure(withOptions: nil, expandableCVProtocol: self)
 
         return cell
     }

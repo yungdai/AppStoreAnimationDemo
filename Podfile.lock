@@ -2,15 +2,15 @@ PODS:
   - UIExpandableCVCellKit (1.02)
 
 DEPENDENCIES:
-  - UIExpandableCVCellKit
+  - UIExpandableCVCellKit (from `/Users/yungdai/Documents/Working Code/UIExpandableCVCellKit`)
 
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - UIExpandableCVCellKit
+EXTERNAL SOURCES:
+  UIExpandableCVCellKit:
+    :path: "/Users/yungdai/Documents/Working Code/UIExpandableCVCellKit"
 
 SPEC CHECKSUMS:
   UIExpandableCVCellKit: ed7eda31e3623e3029b72823a701d295aaa20a64
 
-PODFILE CHECKSUM: bf499bb09372e9e783e6ff74233c9fe135dc4925
+PODFILE CHECKSUM: 93aef9214c6996705f70d3e9639e1a5efb64985e
 
-COCOAPODS: 1.7.0.rc.2
+COCOAPODS: 1.7.1
