@@ -27,12 +27,6 @@ final class CollectionViewController: UICollectionViewController, ExpandableCVPr
 			animateStatusBar(duration: 0.3)
 		}
 	}
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-		UIApplication.shared.statusBarView?.backgroundColor = UIColor.white
-    }
 	
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
@@ -140,13 +134,4 @@ extension UILabel {
 	}
 }
 
-extension UIApplication {
-	
-	/// Handy helper to get access to the statusBar's view
-	var statusBarView: UIView? {
-		guard let statusBarView = UIApplication.shared.value(forKeyPath: "statusBarWindow.statusBar") as? UIView else {
-			return nil
-		}
-		return statusBarView
-	}
-}
+

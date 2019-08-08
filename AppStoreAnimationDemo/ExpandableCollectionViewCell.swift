@@ -11,8 +11,7 @@ import UIExpandableCVCellKit
 final class ExpandableCollectionViewCell: UICollectionViewCell, ExpandableCVCellProtocol {
 	
 	@IBOutlet var headerHeightConstraint: NSLayoutConstraint!
-	
-	@IBOutlet weak var bodyContainerWidthConstraint: NSLayoutConstraint!
+
 	@IBOutlet weak var headerView: UIView!
 	@IBOutlet weak var containerView: UIView!
 	@IBOutlet weak var contentContainerView: UIView!
@@ -67,9 +66,6 @@ final class ExpandableCollectionViewCell: UICollectionViewCell, ExpandableCVCell
 		headerView.layer.cornerRadius = cornerRadius
 		headerView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
 
-		let textContainerWidth = self.containerView.bounds.width - (margin * 2)
-		
-		bodyContainerWidthConstraint.constant = textContainerWidth
 		
 		bodyText.setNeedsUpdateConstraints()
 		

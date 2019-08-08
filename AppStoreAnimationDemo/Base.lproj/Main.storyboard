@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qd4-OB-KcK">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qd4-OB-KcK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -86,9 +83,6 @@
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQf-BQ-4QE">
                                                             <rect key="frame" x="20" y="61" width="335" height="243.5"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="335" id="DzC-Sw-YT7"/>
-                                                            </constraints>
                                                             <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dictum odio non est cursus, sit amet varius ligula consequat. Morbi egestas, diam vitae molestie semper, ante magna tempus ante, sed auctor risus diam et quam. Nam blandit egestas eros at efficitur. Aenean vel mollis dui. Morbi sodales, quam at suscipit ornare, leo libero sollicitudin arcu, ac ultricies purus nisl nec nunc. Quisque in suscipit metus. Maecenas a ante tincidunt, cursus ipsum sollicitudin, venenatis orci.</string>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -127,7 +121,6 @@
                                     <constraint firstItem="1j4-Bt-iNb" firstAttribute="leading" secondItem="7wh-w0-vcN" secondAttribute="leading" id="pvY-ZO-CfL"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="bodyContainerWidthConstraint" destination="DzC-Sw-YT7" id="dJY-6f-ZlR"/>
                                     <outlet property="bodyText" destination="gQf-BQ-4QE" id="Bbi-a5-0hb"/>
                                     <outlet property="closeButton" destination="ehx-3f-TpH" id="DBY-wg-liM"/>
                                     <outlet property="containerView" destination="1j4-Bt-iNb" id="NZ8-5D-0af"/>

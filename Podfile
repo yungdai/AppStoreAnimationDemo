@@ -8,8 +8,8 @@ target 'AppStoreAnimationDemo' do
   # Pods for UXTestPrototypes
   # Use the following line to use App Center Analytics and Crashes.
 
-  if File.exist?("/Users/yungdai/Documents/Working Code/UIExpandableCVCellKit/UIExpandableCVCellKit.podspec")
-      pod 'UIExpandableCVCellKit', :path => "/Users/yungdai/Documents/Working Code/UIExpandableCVCellKit"
+  if File.exist?("/Users/yungdai/Yung's Respositories/UIExpandableCVCellKit/UIExpandableCVCellKit.podspec")
+      pod 'UIExpandableCVCellKit', :path => "/Users/yungdai/Yung's Respositories/UIExpandableCVCellKit"
   else
       pod 'UIExpandableCVCellKit'
   end
