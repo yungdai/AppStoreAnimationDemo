@@ -58,8 +58,6 @@ final class ExpandableCollectionViewCell: UICollectionViewCell, ExpandableCVCell
 
 		closeButton.layer.backgroundColor = UIColor.lightGray.cgColor
 		closeButton.layer.cornerRadius = closeButton.bounds.width / 2
-
-		let margin: CGFloat = 20.0
 		
 		contentContainerView.layer.cornerRadius = cornerRadius
 		
